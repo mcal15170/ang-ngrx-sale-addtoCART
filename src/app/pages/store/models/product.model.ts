@@ -7,4 +7,5 @@ export interface IProduct {
     img: string;
     active: boolean;
     category: string;
+    cartQty:number;
 }

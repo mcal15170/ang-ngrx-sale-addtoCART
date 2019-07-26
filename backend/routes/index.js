@@ -13,7 +13,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item1.jpeg',
             active: true,
-            category: 'MB'
+            category: 'MB',
+            cartQty:0
         },
         {
             id: 2,
@@ -24,7 +25,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item2.jpeg',
             active: true,
-            category: 'FW'
+            category: 'FW',
+            cartQty:0
         },
         {
             id: 3,
@@ -35,7 +37,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item3.jpeg',
             active: true,
-            category: 'HP&SP'
+            category: 'HP&SP',
+            cartQty:0
         },
         {
             id: 4,
@@ -46,7 +49,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item4.jpeg',
             active: true,
-            category: 'FA'
+            category: 'FA',
+            cartQty:0
         },
         {
             id: 5,
@@ -57,7 +61,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item5.jpeg',
             active: true,
-            category: 'FA'
+            category: 'FA',
+            cartQty:0
         },
         {
             id: 6,
@@ -68,7 +73,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item6.jpeg',
             active: true,
-            category: 'MB'
+            category: 'MB',
+            cartQty:0
         },
         {
             id: 7,
@@ -79,7 +85,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item7.jpeg',
             active: true,
-            category: 'FA'
+            category: 'FA',
+            cartQty:0
         },
         {
             id: 8,
@@ -90,7 +97,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item8.jpeg',
             active: true,
-            category: 'HP&SP'
+            category: 'HP&SP',
+            cartQty:0
         },
         {
             id: 9,
@@ -101,7 +109,8 @@ router.get('/', function (req, res, next) {
             qty: 23,
             img: 'item9.jpeg',
             active: true,
-            category: 'FA'
+            category: 'FA',
+            cartQty:0
         },
         {
             id: 10,
@@ -112,7 +121,8 @@ router.get('/', function (req, res, next) {
             qty: 9,
             img: 'item10.jpeg',
             active: true,
-            category: 'FA'
+            category: 'FA',
+            cartQty:0
         },
         {
             id: 11,
@@ -123,7 +133,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item11.jpeg',
             active: true,
-            category: 'FW'
+            category: 'FW',
+            cartQty:0
         },
         {
             id: 12,
@@ -134,7 +145,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item12.jpeg',
             active: true,
-            category: 'HP&SP'
+            category: 'HP&SP',
+            cartQty:0
         },
         {
             id: 13,
@@ -145,7 +157,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item13.jpeg',
             active: true,
-            category: 'HP&SP'
+            category: 'HP&SP',
+            cartQty:0
         },
         {
             id: 14,
@@ -156,7 +169,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item14.jpeg',
             active: true,
-            category: 'FW'
+            category: 'FW',
+            cartQty:0
         },
         {
             id: 15,
@@ -167,7 +181,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item15.jpeg',
             active: true,
-            category: 'MB'
+            category: 'MB',
+            cartQty:0
         },
         {
             id: 16,
@@ -178,7 +193,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item16.jpeg',
             active: true,
-            category: 'HP&SP'
+            category: 'HP&SP',
+            cartQty:0
         },
         {
             id: 17,
@@ -189,7 +205,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item17.jpeg',
             active: true,
-            category: 'MB'
+            category: 'MB',
+            cartQty:0
         },
         {
             id: 18,
@@ -200,7 +217,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item18.jpeg',
             active: true,
-            category: 'FW'
+            category: 'FW',
+            cartQty:0
         },
         {
             id: 19,
@@ -211,7 +229,8 @@ router.get('/', function (req, res, next) {
             qty: 23,
             img: 'item19.jpeg',
             active: true,
-            category: 'MB'
+            category: 'MB',
+            cartQty:0
         },
         {
             id: 20,
@@ -222,7 +241,8 @@ router.get('/', function (req, res, next) {
             qty: 9,
             img: 'item20.jpeg',
             active: true,
-            category: 'MB'
+            category: 'MB',
+            cartQty:0
         },
         {
             id: 21,
@@ -233,7 +253,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item21.jpeg',
             active: true,
-            category: 'FB'
+            category: 'FB',
+            cartQty:0
         },
         {
             id: 22,
@@ -244,7 +265,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item22.jpeg',
             active: true,
-            category: 'FB'
+            category: 'FB',
+            cartQty:0
         },
         {
             id: 23,
@@ -255,7 +277,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item23.jpeg',
             active: true,
-            category: 'FB'
+            category: 'FB',
+            cartQty:0
         },
         {
             id: 24,
@@ -266,7 +289,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item24.jpeg',
             active: true,
-            category: 'FB'
+            category: 'FB',
+            cartQty:0
         },
         {
             id: 25,
@@ -277,7 +301,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item25.jpeg',
             active: true,
-            category: 'FB'
+            category: 'FB',
+            cartQty:0
         },
         {
             id: 26,
@@ -288,7 +313,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item26.jpeg',
             active: true,
-            category: 'FB'
+            category: 'FB',
+            cartQty:0
         },
         {
             id: 27,
@@ -299,7 +325,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item27.jpeg',
             active: true,
-            category: 'FW'
+            category: 'FW',
+            cartQty:0
         },
         {
             id: 28,
@@ -310,7 +337,8 @@ router.get('/', function (req, res, next) {
             qty: 10,
             img: 'item28.jpeg',
             active: true,
-            category: 'FW'
+            category: 'FW',
+            cartQty:0
         },
         {
             id: 29,
@@ -321,7 +349,8 @@ router.get('/', function (req, res, next) {
             qty: 23,
             img: 'item29.jpeg',
             active: true,
-            category: 'FA'
+            category: 'FA',
+            cartQty:0
         },
         {
             id: 30,
@@ -332,7 +361,8 @@ router.get('/', function (req, res, next) {
             qty: 9,
             img: 'item30.jpeg',
             active: true,
-            category: 'FB'
+            category: 'FB',
+            cartQty:0
         }
     ]
     res.send(products)
