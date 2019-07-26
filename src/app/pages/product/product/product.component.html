@@ -5,7 +5,7 @@
         <mat-label>Filter Product</mat-label>
         <mat-select (selectionChange)="applyFilter($event)">
           <mat-option *ngFor="let filter of filters" [value]="filter.value">
-            {{filter.viewValue}}<i class="fa fa-mobile float-right fa-2x"></i>
+            {{filter.viewValue}}<mat-icon class="float-right">{{filter.icon}}</mat-icon>
           </mat-option>
         </mat-select>
       </mat-form-field>
@@ -16,7 +16,7 @@
 
 <div class="row">
   <div *ngFor="let item of products$" class="col-md-3 mb-4">
-    <div class="card">
+    <div i18n class="card">
       <div class="imgdiv"  width="150px" height="150px">
           <img [src]="'../../../../assets/img/product/'+item.img" class="pro-img" alt="...">
       </div>
@@ -32,7 +32,7 @@
           </div>
           <div class="col-md-4 price">Rs. {{item.price}}</div>
           <div class="col-md-4 qty">Qty {{item.qty}}</div>
-          <div class="col-md-4"><button class="btn btn-dark"><i class="fa fa-cart-plus fa-2x"></i></button></div>
+          <div class="col-md-4"><button (click)="addToCart(item)" class="btn btn-dark"><i class="fa fa-cart-plus fa-2x"></i></button></div>
         </div>
       </div>
     </div>

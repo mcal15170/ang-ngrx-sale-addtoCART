@@ -15,7 +15,10 @@ export function rootReducer(state: any = initialState, action: ProductAction) {
             }
 
         case ProdcutType.ADD_TO_CART:
-            return state;
+            return {
+                products: [...state.products],
+                cart: [...state.cart, action.payload]
+            }
         default:
             return state;
     }

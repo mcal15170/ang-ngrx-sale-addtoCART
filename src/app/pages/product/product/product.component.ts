@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MyProductService } from '../product/../my-product.service';
 import { Store } from '@ngrx/store';
 import { IAppState } from '../../store/models/app-state.model';
-import { AddProductAction } from '../../store/actions/product.action';
+import { AddProductAction, ADDToCartAction } from '../../store/actions/product.action';
 import { IProduct } from '../../store/models/product.model';
 
 @Component({
@@ -13,12 +13,12 @@ import { IProduct } from '../../store/models/product.model';
 export class ProductComponent implements OnInit {
   products$: IProduct[];
   filters = [
-    { value: 'All', viewValue: 'All' },
-    { value: 'MB', viewValue: 'Mobile New Launches' },
-    { value: 'FA', viewValue: 'Fashion Accessories' },
-    { value: 'FB', viewValue: 'Furniture Bestsellers' },
-    { value: 'FW', viewValue: 'Men\'s Footwear' },
-    { value: 'HP&SP', viewValue: 'Headphones & Speakers' }
+    { value: 'All', viewValue: 'All', icon: 'menu' },
+    { value: 'MB', viewValue: 'Mobile New Launches', icon: 'mobile_screen_share' },
+    { value: 'FA', viewValue: 'Fashion Accessories', icon: 'watch' },
+    { value: 'FB', viewValue: 'Furniture Bestsellers', icon: 'hotel' },
+    { value: 'FW', viewValue: 'Men\'s Footwear', icon: 'pets' },
+    { value: 'HP&SP', viewValue: 'Headphones & Speakers', icon: 'headset' }
   ];
 
   constructor(private prouctService: MyProductService, public store: Store<IAppState>) { }
@@ -44,7 +44,10 @@ export class ProductComponent implements OnInit {
       }
 
     });
-    console.log(this.products$);
+  }
+
+  addToCart(product: IProduct) {
+    this.store.dispatch(new ADDToCartAction(product));
   }
 
 }
