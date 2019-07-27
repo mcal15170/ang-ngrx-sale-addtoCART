@@ -5,6 +5,9 @@ import { CartComponent } from './cart/cart.component';
 import { MyProductService } from './my-product.service';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
+import { ProductCarouselComponent } from './product-carousel/product-carousel.component';
+import { ProductAdvetisementComponent } from './product-advetisement/product-advetisement.component';
+import { ProductBannerComponent } from './product-banner/product-banner.component';
 
 @NgModule({
   imports: [
@@ -12,7 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatSelectModule,
     MatIconModule
   ],
-  declarations: [ProductComponent, CartComponent],
+  declarations: [ProductComponent, CartComponent, ProductCarouselComponent, ProductAdvetisementComponent, ProductBannerComponent],
   providers: [MyProductService]
 
 })

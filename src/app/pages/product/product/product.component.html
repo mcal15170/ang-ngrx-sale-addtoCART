@@ -1,3 +1,17 @@
+<section class="mb-4">
+  <app-product-banner></app-product-banner>
+</section>
+
+
+<section class="mb-4">
+  <app-product-advetisement></app-product-advetisement>
+</section>
+
+<section class="mb-4">
+  <app-product-carousel></app-product-carousel>
+</section>
+
+
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <p>Filter :
@@ -17,8 +31,8 @@
 <div class="row">
   <div *ngFor="let item of products$" class="col-md-3 mb-4">
     <div i18n class="card">
-      <div class="imgdiv"  width="150px" height="150px">
-          <img [src]="'../../../../assets/img/product/'+item.img" class="pro-img" alt="...">
+      <div class="imgdiv" width="150px" height="150px">
+        <img [src]="'../../../../assets/img/product/'+item.img" class="pro-img" alt="...">
       </div>
       <div class="card-body">
         <h5 class="card-title">{{item.title}}</h5>
@@ -32,7 +46,8 @@
           </div>
           <div class="col-md-4 price">Rs. {{item.price}}</div>
           <div class="col-md-4 qty">Qty {{item.qty}}</div>
-          <div class="col-md-4"><button (click)="addToCart(item)" class="btn btn-dark"><i class="fa fa-cart-plus fa-2x"></i></button></div>
+          <div class="col-md-4"><button (click)="addToCart(item)" class="btn btn-dark btnCart"><i
+                class="fa fa-cart-plus fa-lg"></i></button></div>
         </div>
       </div>
     </div>
