@@ -62,6 +62,8 @@ export class ProductComponent implements OnInit {
       });
   }
 
+
+
   genderFilter(event) {
     this.store
       .select(state => state)

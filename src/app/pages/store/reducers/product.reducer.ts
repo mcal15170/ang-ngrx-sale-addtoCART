@@ -47,6 +47,28 @@ export function rootReducer(state: any = initialState, action: ProductAction) {
         products: [...dummyProduct],
         cart: [...dummyCart]
       };
+
+    case ProdcutType.REMOVE_CART:
+      dummyCart = [...state.cart];
+      dummyProduct = [...state.products];
+      dummyCartIndex = dummyCart.findIndex(item => item.id === action.id);
+      dummyProductIndex = dummyProduct.findIndex(item => item.id === action.id);
+
+      if (dummyCartIndex >= 0) {
+        dummyCart.splice(dummyCartIndex, 1);
+      }
+
+      if (dummyProductIndex >= 0) {
+        dummyProduct[dummyProductIndex].qty =
+          dummyProduct[dummyProductIndex].qty + action.cartQty;
+        dummyProduct[dummyProductIndex].cartQty =
+          dummyProduct[dummyProductIndex].cartQty + action.cartQty;
+      }
+      return {
+        products: [...dummyProduct],
+        cart: [...dummyCart]
+      };
+
     default:
       return state;
   }
