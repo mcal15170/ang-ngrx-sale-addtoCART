@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {IAppState} from '../../store/models/app-state.model';
+import { IProduct } from '../../store/models/product.model';
 
 @Component({
   selector: 'app-product-carousel',

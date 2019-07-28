@@ -2,7 +2,6 @@
   <app-product-banner></app-product-banner>
 </section>
 
-
 <section class="mb-4">
   <app-product-advetisement></app-product-advetisement>
 </section>
@@ -11,32 +10,81 @@
   <app-product-carousel></app-product-carousel>
 </section>
 
-
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <p>Filter :
-      <mat-form-field class="col-md-4">
-        <mat-label>Filter Product</mat-label>
-        <mat-select (selectionChange)="applyFilter($event)">
-          <mat-option *ngFor="let filter of filters" [value]="filter.value">
-            {{filter.viewValue}}<mat-icon class="float-right">{{filter.icon}}</mat-icon>
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
+    <div class="row">
+      <div class="col-md-4">
+        <p>
+          <b>Sort By</b> :
+          <mat-form-field class="col-md-12">
+            <mat-label>Filter Product by category</mat-label>
+            <mat-select (selectionChange)="applyFilter($event)">
+              <mat-option *ngFor="let filter of filters" [value]="filter.value">
+                {{ filter.viewValue
+                }}<mat-icon class="float-right">{{ filter.icon }}</mat-icon>
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </p>
+      </div>
+      <div class="col-md-2">
+        <button
+          class="btn btn-dark btnLine mr-3"
+          (click)="priceQualityFilter('hight')"
+        >
+          Price -- Low to High
+        </button>
+      </div>
+      <div class="col-md-2">
+        <button
+          class="btn btn-dark btnLine"
+          (click)="priceQualityFilter('low')"
+        >
+          Price -- High to Low
+        </button>
+      </div>
+    </div>
+
+    <p class="lead">
+      This is a modified jumbotron that occupies the entire horizontal space of
+      its parent.
     </p>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
   </div>
 </div>
+
+<ng-template [ngIf]="currentFilter === 'FW'|| currentFilter === 'FA'">
+  <mat-toolbar class="mb-2">
+    <label class="mr-2">Filter By</label>
+    <mat-radio-group
+      aria-label="Select an option"
+      (change)="genderFilter($event)"
+    >
+      <mat-radio-button value="m"
+        ><mat-icon>directions_run</mat-icon></mat-radio-button
+      >
+      <mat-radio-button value="f"
+        ><mat-icon>pregnant_woman</mat-icon></mat-radio-button
+      >
+      <mat-radio-button value="all" [checked]="true"
+        ><mat-icon>calendar_view_day</mat-icon></mat-radio-button
+      >
+    </mat-radio-group>
+  </mat-toolbar>
+</ng-template>
 
 <div class="row">
   <div *ngFor="let item of products$" class="col-md-3 mb-4">
     <div i18n class="card">
       <div class="imgdiv" width="150px" height="150px">
-        <img [src]="'../../../../assets/img/product/'+item.img" class="pro-img" alt="...">
+        <img
+          [src]="'../../../../assets/img/product/' + item.img"
+          class="pro-img"
+          alt="..."
+        />
       </div>
       <div class="card-body">
-        <h5 class="card-title">{{item.title}}</h5>
-        <p class="card-text">{{item.desc}}</p>
+        <h5 class="card-title">{{ item.title }}</h5>
+        <p class="card-text">{{ item.desc }}</p>
       </div>
       <div class="card-body border-top pt-2">
         <div class="row">
@@ -44,10 +92,13 @@
             <span class="_1xZuAn">Offers</span>
             <span>No Cost EMI & 2 More</span>
           </div>
-          <div class="col-md-4 price">Rs. {{item.price}}</div>
-          <div class="col-md-4 qty">Qty {{item.qty}}</div>
-          <div class="col-md-4"><button (click)="addToCart(item)" class="btn btn-dark btnCart"><i
-                class="fa fa-cart-plus fa-lg"></i></button></div>
+          <div class="col-md-5 price">Rs. {{ item.price }}</div>
+          <div class="col-md-4 qty">Qty {{ item.qty }}</div>
+          <div class="col-md-3">
+            <button (click)="addToCart(item)" class="btn btn-dark btnCart">
+              <i class="fa fa-cart-plus fa-lg"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
