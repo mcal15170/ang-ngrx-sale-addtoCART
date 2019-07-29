@@ -6,7 +6,9 @@ import { MyProductService } from "./my-product.service";
 import { MatSelectModule } from "@angular/material/select";
 import { MatIconModule } from "@angular/material/icon";
 import { MatRadioModule } from "@angular/material/radio";
+import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { FormsModule } from '@angular/forms';
 import { ProductCarouselComponent } from "./product-carousel/product-carousel.component";
 import { ProductAdvetisementComponent } from "./product-advetisement/product-advetisement.component";
 import { ProductBannerComponent } from "./product-banner/product-banner.component";
@@ -15,6 +17,8 @@ import { ProductBannerComponent } from "./product-banner/product-banner.componen
   imports: [
     CommonModule,
     MatSelectModule,
+    FormsModule,
+    MatPaginatorModule,
     MatIconModule,
     MatRadioModule,
     MatToolbarModule

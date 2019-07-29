@@ -29,7 +29,7 @@ export class RemoveCartAction implements Action {
 export class UpdateCartAction implements Action {
   readonly type = ProdcutType.UPDATE_CART;
 
-  constructor(public payload: number) {}
+  constructor(public id: number, public qtyType: string) {}
 }
 
 export type ProductAction =

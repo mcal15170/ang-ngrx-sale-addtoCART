@@ -30,16 +30,24 @@ export function rootReducer(state: any = initialState, action: ProductAction) {
 
       if (dummyCartIndex < 0) {
         action.payload.cartQty++;
+        action.payload.cartPrice =
+          action.payload.cartPrice + action.payload.price;
         dummyCart.push(action.payload);
       } else {
         const alredyCart = { ...dummyCart[dummyCartIndex] };
-        alredyCart.cartQty++;
+        if (dummyProduct[dummyProductIndex].qty > 0) {
+          alredyCart.cartQty++;
+          alredyCart.cartPrice = alredyCart.cartPrice + alredyCart.price;
+        }
         dummyCart[dummyCartIndex] = alredyCart;
       }
 
       if (dummyProductIndex >= 0) {
         const alreadyProduct = { ...dummyProduct[dummyProductIndex] };
-        alreadyProduct.qty--;
+        if (alreadyProduct.qty > 0) {
+          alreadyProduct.qty--;
+        }
+
         dummyProduct[dummyProductIndex] = alreadyProduct;
       }
 
@@ -63,6 +71,42 @@ export function rootReducer(state: any = initialState, action: ProductAction) {
           dummyProduct[dummyProductIndex].qty + action.cartQty;
         dummyProduct[dummyProductIndex].cartQty =
           dummyProduct[dummyProductIndex].cartQty + action.cartQty;
+      }
+      return {
+        products: [...dummyProduct],
+        cart: [...dummyCart]
+      };
+
+    case ProdcutType.UPDATE_CART:
+      dummyCart = [...state.cart];
+      dummyProduct = [...state.products];
+      dummyCartIndex = dummyCart.findIndex(item => item.id === action.id);
+      dummyProductIndex = dummyProduct.findIndex(item => item.id === action.id);
+
+      if (dummyCartIndex >= 0) {
+        if (action.qtyType === "increse") {
+          if (dummyProduct[dummyProductIndex].qty > 0) {
+            dummyCart[dummyCartIndex].cartQty++;
+            dummyCart[dummyCartIndex].cartPrice =
+              dummyCart[dummyCartIndex].cartPrice +
+              dummyProduct[dummyProductIndex].price;
+          }
+        } else {
+          dummyCart[dummyCartIndex].cartQty--;
+          dummyCart[dummyCartIndex].cartPrice =
+            dummyCart[dummyCartIndex].cartPrice -
+            dummyProduct[dummyProductIndex].price;
+        }
+      }
+
+      if (dummyProductIndex >= 0) {
+        if (action.qtyType === "increse") {
+          if (dummyProduct[dummyProductIndex].qty > 0) {
+            dummyProduct[dummyProductIndex].qty--;
+          }
+        } else {
+          dummyProduct[dummyProductIndex].qty++;
+        }
       }
       return {
         products: [...dummyProduct],

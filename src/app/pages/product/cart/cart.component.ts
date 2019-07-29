@@ -14,6 +14,7 @@ import {
 })
 export class CartComponent implements OnInit {
   cart$: IProduct[];
+  txtCartQty: number = 0;
 
   constructor(public store: Store<IAppState>) {}
 
@@ -27,5 +28,18 @@ export class CartComponent implements OnInit {
 
   removeCart(id: number, qty: number) {
     this.store.dispatch(new RemoveCartAction(id, qty));
+  }
+
+  updateCartQty(id: number, type: string, cartQty: number) {
+    console.log(id, type, cartQty);
+
+    this.store.dispatch(new UpdateCartAction(id, type));
+
+    if (cartQty < 2 || cartQty === 1) {
+      document.getElementById("btnDescres" + id).style.display = "none";
+    } else {
+      document.getElementById("btnDescres" + id).style.display =
+        "-webkit-inline-box";
+    }
   }
 }

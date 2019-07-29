@@ -17,11 +17,14 @@
         <div class="col-md-9">
           <div class="card-body">
             <div class="row">
-              <div class="col-md-9">
+              <div class="col-md-6">
                 <h5 class="card-title">{{ item.title }}</h5>
               </div>
               <div class="col-md-3">
-                <b>Rs. {{ item.price * item.cartQty }}</b>
+                <b>Unit Price Rs. {{ item.price }}</b>
+              </div>
+              <div class="col-md-3">
+                <b>Total Rs. {{ item.cartPrice }}</b>
               </div>
             </div>
             <p class="card-text">{{ item.desc }}</p>
@@ -33,11 +36,18 @@
                 <span>MDXGlobal</span>
               </div>
               <div class="col-md-5 price">
-                <button class="btn btn-dark btnUpdateCart">
+                <button
+                  class="btn btn-dark btnUpdateCart"
+                  [id]="'btnIncrese' + item.id"
+                  (click)="updateCartQty(item.id, 'increse', item.cartQty)"
+                >
                   <mat-icon>exposure_plus_1</mat-icon>
                 </button>
-                <input type="number" />
-                <button class="btn btn-dark btnUpdateCart">
+                <button
+                  class="btn btn-dark btnUpdateCart"
+                  [id]="'btnDescres' + item.id"
+                  (click)="updateCartQty(item.id, 'decrese', item.cartQty)"
+                >
                   <mat-icon>exposure_neg_1</mat-icon>
                 </button>
               </div>

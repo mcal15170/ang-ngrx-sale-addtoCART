@@ -29,6 +29,7 @@ export class ProductComponent implements OnInit {
     { value: "HP&SP", viewValue: "Headphones & Speakers", icon: "headset" },
     { value: "KA", viewValue: "kitchen Accessories", icon: "kitchen" }
   ];
+  
 
   constructor(
     private prouctService: MyProductService,
