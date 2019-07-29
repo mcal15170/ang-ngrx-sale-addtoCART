@@ -1,31 +1,17 @@
-<h5>Deals of the Day</h5>
-<div id="productCarousel" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li
-      data-target="#productCarousel"
-      data-slide-to="0"
-      class="active"
-    ></li>
-    <li data-target="#productCarousel" data-slide-to="0"></li>
-    <li data-target="#productCarousel" data-slide-to="0"></li>
-  </ol>
+<h5>Deals of the Day {{12/productPerSection}}</h5>
+<div id="carouselProdctCard" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="carousel-item" [ngClass]="{'active':i===0}" *ngFor="let item of slides;let i = index">
       <div class="row">
-        <div class="col-md-4">
+        <div [class]="'col-md-'+boostrapDiv" *ngFor="let data of item; let cardIndex = index">
           <div class="card">
             <div class="imgdiv" width="150px" height="150px">
-              <img
-                src="../../../../assets/img/product/item12.jpeg"
-                class="pro-img"
-                alt="..."
-              />
+              <img [src]="'../../../../assets/img/product/' + data.img" class="pro-img" alt="..." />
             </div>
             <div class="card-body">
-              <h5 class="card-title">Samsung A50</h5>
+              <h5 class="card-title">{{data.title}}</h5>
               <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-                ex.
+                {{data.desc}}
               </p>
             </div>
             <div class="card-body border-top pt-2">
@@ -34,87 +20,10 @@
                   <span class="_1xZuAn">Offers</span>
                   <span>No Cost EMI & 2 More</span>
                 </div>
-                <div class="col-md-5 price">Rs. 780</div>
-                <div class="col-md-4 qty">Qty 23</div>
+                <div class="col-md-5 price">Rs. {{data.price}}</div>
+                <div class="col-md-4 qty">Qty {{data.qty}}</div>
                 <div class="col-md-3">
-                  <button
-                    (click)="addToCart(item)"
-                    class="btn btn-dark btnCart"
-                  >
-                    <i class="fa fa-cart-plus fa-lg"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card">
-            <div class="imgdiv" width="150px" height="150px">
-              <img
-                src="../../../../assets/img/product/item12.jpeg"
-                class="pro-img"
-                alt="..."
-              />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Samsung A50</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-                ex.
-              </p>
-            </div>
-            <div class="card-body border-top pt-2">
-              <div class="row">
-                <div class="col-md-12">
-                  <span class="_1xZuAn">Offers</span>
-                  <span>No Cost EMI & 2 More</span>
-                </div>
-                <div class="col-md-5 price">Rs. 780</div>
-                <div class="col-md-4 qty">Qty 23</div>
-                <div class="col-md-3">
-                  <button
-                    (click)="addToCart(item)"
-                    class="btn btn-dark btnCart"
-                  >
-                    <i class="fa fa-cart-plus fa-lg"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card">
-            <div class="imgdiv" width="150px" height="150px">
-              <img
-                src="../../../../assets/img/product/item12.jpeg"
-                class="pro-img"
-                alt="..."
-              />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Samsung A50</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-                ex.
-              </p>
-            </div>
-            <div class="card-body border-top pt-2">
-              <div class="row">
-                <div class="col-md-12">
-                  <span class="_1xZuAn">Offers</span>
-                  <span>No Cost EMI & 2 More</span>
-                </div>
-                <div class="col-md-5 price">Rs. 780</div>
-                <div class="col-md-4 qty">Qty 23</div>
-                <div class="col-md-3">
-                  <button
-                    (click)="addToCart(item)"
-                    class="btn btn-dark btnCart"
-                  >
+                  <button (click)="addToCart(item)" class="btn btn-dark btnCart">
                     <i class="fa fa-cart-plus fa-lg"></i>
                   </button>
                 </div>
@@ -123,253 +32,12 @@
           </div>
         </div>
       </div>
+      <a class="carousel-control-prev" href="#carouselProdctCard" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselProdctCard" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-    <div class="carousel-item">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <div class="imgdiv" width="150px" height="150px">
-              <img
-                src="../../../../assets/img/product/item12.jpeg"
-                class="pro-img"
-                alt="..."
-              />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Samsung A50</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-                ex.
-              </p>
-            </div>
-            <div class="card-body border-top pt-2">
-              <div class="row">
-                <div class="col-md-12">
-                  <span class="_1xZuAn">Offers</span>
-                  <span>No Cost EMI & 2 More</span>
-                </div>
-                <div class="col-md-5 price">Rs. 780</div>
-                <div class="col-md-4 qty">Qty 23</div>
-                <div class="col-md-3">
-                  <button
-                    (click)="addToCart(item)"
-                    class="btn btn-dark btnCart"
-                  >
-                    <i class="fa fa-cart-plus fa-lg"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card">
-            <div class="imgdiv" width="150px" height="150px">
-              <img
-                src="../../../../assets/img/product/item12.jpeg"
-                class="pro-img"
-                alt="..."
-              />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Samsung A50</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-                ex.
-              </p>
-            </div>
-            <div class="card-body border-top pt-2">
-              <div class="row">
-                <div class="col-md-12">
-                  <span class="_1xZuAn">Offers</span>
-                  <span>No Cost EMI & 2 More</span>
-                </div>
-                <div class="col-md-5 price">Rs. 780</div>
-                <div class="col-md-4 qty">Qty 23</div>
-                <div class="col-md-3">
-                  <button
-                    (click)="addToCart(item)"
-                    class="btn btn-dark btnCart"
-                  >
-                    <i class="fa fa-cart-plus fa-lg"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card">
-            <div class="imgdiv" width="150px" height="150px">
-              <img
-                src="../../../../assets/img/product/item12.jpeg"
-                class="pro-img"
-                alt="..."
-              />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Samsung A50</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-                ex.
-              </p>
-            </div>
-            <div class="card-body border-top pt-2">
-              <div class="row">
-                <div class="col-md-12">
-                  <span class="_1xZuAn">Offers</span>
-                  <span>No Cost EMI & 2 More</span>
-                </div>
-                <div class="col-md-5 price">Rs. 780</div>
-                <div class="col-md-4 qty">Qty 23</div>
-                <div class="col-md-3">
-                  <button
-                    (click)="addToCart(item)"
-                    class="btn btn-dark btnCart"
-                  >
-                    <i class="fa fa-cart-plus fa-lg"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <div class="imgdiv" width="150px" height="150px">
-              <img
-                src="../../../../assets/img/product/item12.jpeg"
-                class="pro-img"
-                alt="..."
-              />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Samsung A50</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-                ex.
-              </p>
-            </div>
-            <div class="card-body border-top pt-2">
-              <div class="row">
-                <div class="col-md-12">
-                  <span class="_1xZuAn">Offers</span>
-                  <span>No Cost EMI & 2 More</span>
-                </div>
-                <div class="col-md-5 price">Rs. 780</div>
-                <div class="col-md-4 qty">Qty 23</div>
-                <div class="col-md-3">
-                  <button
-                    (click)="addToCart(item)"
-                    class="btn btn-dark btnCart"
-                  >
-                    <i class="fa fa-cart-plus fa-lg"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card">
-            <div class="imgdiv" width="150px" height="150px">
-              <img
-                src="../../../../assets/img/product/item12.jpeg"
-                class="pro-img"
-                alt="..."
-              />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Samsung A50</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-                ex.
-              </p>
-            </div>
-            <div class="card-body border-top pt-2">
-              <div class="row">
-                <div class="col-md-12">
-                  <span class="_1xZuAn">Offers</span>
-                  <span>No Cost EMI & 2 More</span>
-                </div>
-                <div class="col-md-5 price">Rs. 780</div>
-                <div class="col-md-4 qty">Qty 23</div>
-                <div class="col-md-3">
-                  <button
-                    (click)="addToCart(item)"
-                    class="btn btn-dark btnCart"
-                  >
-                    <i class="fa fa-cart-plus fa-lg"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card">
-            <div class="imgdiv" width="150px" height="150px">
-              <img
-                src="../../../../assets/img/product/item12.jpeg"
-                class="pro-img"
-                alt="..."
-              />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Samsung A50</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-                ex.
-              </p>
-            </div>
-            <div class="card-body border-top pt-2">
-              <div class="row">
-                <div class="col-md-12">
-                  <span class="_1xZuAn">Offers</span>
-                  <span>No Cost EMI & 2 More</span>
-                </div>
-                <div class="col-md-5 price">Rs. 780</div>
-                <div class="col-md-4 qty">Qty 23</div>
-                <div class="col-md-3">
-                  <button
-                    (click)="addToCart(item)"
-                    class="btn btn-dark btnCart"
-                  >
-                    <i class="fa fa-cart-plus fa-lg"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <a
-    class="carousel-control-prev"
-    href="#productCarousel"
-    role="button"
-    data-slide="prev"
-  >
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a
-    class="carousel-control-next"
-    href="#productCarousel"
-    role="button"
-    data-slide="next"
-  >
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
