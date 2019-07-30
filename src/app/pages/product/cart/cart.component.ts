@@ -14,7 +14,9 @@ import {
 })
 export class CartComponent implements OnInit {
   cart$: IProduct[];
+  product$: IProduct[];
   txtCartQty: number = 0;
+  cartMsg: string = "";
 
   constructor(public store: Store<IAppState>) {}
 
@@ -23,6 +25,7 @@ export class CartComponent implements OnInit {
       .select(state => state)
       .subscribe((data: any) => {
         this.cart$ = data.sales.cart;
+        this.product$ = data.sales.products;
       });
   }
 
@@ -30,15 +33,31 @@ export class CartComponent implements OnInit {
     this.store.dispatch(new RemoveCartAction(id, qty));
   }
 
-  updateCartQty(id: number, type: string, cartQty: number) {
-    console.log(id, type, cartQty);
-
-    this.store.dispatch(new UpdateCartAction(id, type));
-
-    if (cartQty < 2 || cartQty === 1) {
-      document.getElementById("btnDescres" + id).style.display = "none";
+  updateCartQty(id: number, type: string, cartQty: number, qty: number) {
+    const currentCartProductIndex = this.product$.findIndex(
+      item => item.id === id
+    );
+    if (
+      (cartQty === 1 && type === "decrese") ||
+      (this.product$[currentCartProductIndex].qty === 0 && type === "increse")
+    ) {
+      if (type === "decrese") {
+        document.getElementById("btnDescres" + id).style.display = "none";
+        document.getElementById("cartMsg").innerHTML =
+          "Error: Minimum 1 qty required per cart product!";
+      } else {
+        document.getElementById("btnIncrese" + id).style.display = "none";
+        document.getElementById("cartMsg").innerHTML =
+          "Error: Current accesible  Product is Out of stock!";
+      }
+      setTimeout(function() {
+        document.getElementById("cartMsg").innerHTML = "";
+      }, 3000);
     } else {
+      this.store.dispatch(new UpdateCartAction(id, type));
       document.getElementById("btnDescres" + id).style.display =
+        "-webkit-inline-box";
+      document.getElementById("btnIncrese" + id).style.display =
         "-webkit-inline-box";
     }
   }

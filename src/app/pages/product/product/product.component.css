@@ -42,8 +42,28 @@
   border: none;
 }
 
-
 .mat-radio-button ~ .mat-radio-button {
   margin-left: 16px;
 }
 
+.outof-stock {
+  width: 90%;
+  font-size: 16px;
+  margin: 0 auto;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  text-align: center;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 56%;
+  height: 55px;
+}
+
+.outof-stock-title {
+  color: #ff6161;
+}

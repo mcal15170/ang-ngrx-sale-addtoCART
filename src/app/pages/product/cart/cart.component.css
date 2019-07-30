@@ -46,3 +46,8 @@
 .btnUpdateCart {
   border: none;
 }
+
+#cartMsg{
+  vertical-align: middle;
+  display: flex;
+}

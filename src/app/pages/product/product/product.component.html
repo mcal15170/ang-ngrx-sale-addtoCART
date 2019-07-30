@@ -82,6 +82,12 @@
           alt="..."
         />
       </div>
+      <div
+        class="outof-stock"
+        [ngStyle]="{ display: item.qty === 0 ? 'block' : 'none' }"
+      >
+        <span class="outof-stock-title">Out Of Stock</span>
+      </div>
       <div class="card-body">
         <h5 class="card-title">{{ item.title }}</h5>
         <p class="card-text">{{ item.desc }}</p>
@@ -95,7 +101,11 @@
           <div class="col-md-5 price">Rs. {{ item.price }}</div>
           <div class="col-md-4 qty">Qty {{ item.qty }}</div>
           <div class="col-md-3">
-            <button (click)="addToCart(item)" class="btn btn-dark btnCart">
+            <button
+              (click)="addToCart(item)"
+              [ngStyle]="{ display: item.qty === 0 ? 'none' : 'block' }"
+              class="btn btn-dark btnCart"
+            >
               <i class="fa fa-cart-plus fa-lg"></i>
             </button>
           </div>
