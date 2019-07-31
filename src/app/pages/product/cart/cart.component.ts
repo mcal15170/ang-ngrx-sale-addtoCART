@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { IAppState } from "../../store/models/app-state.model";
 import { IProduct } from "../../store/models/product.model";
+import { ToastrService } from "ngx-toastr";
 import {
   RemoveCartAction,
   UpdateCartAction
@@ -18,7 +19,7 @@ export class CartComponent implements OnInit {
   txtCartQty: number = 0;
   cartMsg: string = "";
 
-  constructor(public store: Store<IAppState>) {}
+  constructor(public store: Store<IAppState>, public toastr: ToastrService) {}
 
   ngOnInit() {
     this.store
@@ -33,7 +34,7 @@ export class CartComponent implements OnInit {
     this.store.dispatch(new RemoveCartAction(id, qty));
   }
 
-  updateCartQty(id: number, type: string, cartQty: number, qty: number) {
+  updateCartQty(id: number, type: string, cartQty: number) {
     const currentCartProductIndex = this.product$.findIndex(
       item => item.id === id
     );
@@ -43,12 +44,13 @@ export class CartComponent implements OnInit {
     ) {
       if (type === "decrese") {
         document.getElementById("btnDescres" + id).style.display = "none";
-        document.getElementById("cartMsg").innerHTML =
-          "Error: Minimum 1 qty required per cart product!";
+        this.toastr.warning("Minimum 1 qty required per cart product!.", "Opps!");
       } else {
         document.getElementById("btnIncrese" + id).style.display = "none";
-        document.getElementById("cartMsg").innerHTML =
-          "Error: Current accesible  Product is Out of stock!";
+        this.toastr.warning(
+          "Current accesible  Product is Out of stock!.",
+          "Opps!"
+        );
       }
       setTimeout(function() {
         document.getElementById("cartMsg").innerHTML = "";

@@ -67,3 +67,23 @@
 .outof-stock-title {
   color: #ff6161;
 }
+
+/* discount */
+
+.discount-price,
+.discount-disable-price {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.discount-price {
+  color: #2874f0;
+}
+
+.offer-icon{
+  position: absolute;
+}
+
+.orignal-price {
+  text-decoration: line-through;
+}

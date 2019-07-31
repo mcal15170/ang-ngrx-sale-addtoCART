@@ -15,6 +15,7 @@ import { IProduct } from "../../store/models/product.model";
 })
 export class ProductComponent implements OnInit {
   products$: IProduct[];
+  discountRate: number = 5;
   currentFilter: string = "All";
   filters = [
     { value: "All", viewValue: "All", icon: "menu" },
@@ -29,7 +30,6 @@ export class ProductComponent implements OnInit {
     { value: "HP&SP", viewValue: "Headphones & Speakers", icon: "headset" },
     { value: "KA", viewValue: "kitchen Accessories", icon: "kitchen" }
   ];
-  
 
   constructor(
     private prouctService: MyProductService,
@@ -42,7 +42,9 @@ export class ProductComponent implements OnInit {
       this.store
         .select(state => state)
         .subscribe((data: any) => {
-          this.products$ = data.sales.products;
+          this.products$ = data.sales.products.filter(
+            item => item.active === true
+          );
         });
       this.products$;
     });
@@ -54,16 +56,16 @@ export class ProductComponent implements OnInit {
       .select(state => state)
       .subscribe((data: any) => {
         if (event.value === "All") {
-          this.products$ = data.sales.products;
+          this.products$ = data.sales.products.filter(
+            item => item.active === true
+          );
         } else {
           this.products$ = data.sales.products.filter(
-            data => data.category === event.value
+            data => data.category === event.value && data.active === true
           );
         }
       });
   }
-
-
 
   genderFilter(event) {
     this.store
@@ -71,13 +73,14 @@ export class ProductComponent implements OnInit {
       .subscribe((data: any) => {
         if (event.value === "all") {
           this.products$ = data.sales.products.filter(
-            data => data.category === this.currentFilter
+            data => data.category === this.currentFilter && data.active === true
           );
         } else {
           this.products$ = data.sales.products.filter(
             data =>
               data.category === this.currentFilter &&
-              data.productFor === event.value
+              data.productFor === event.value &&
+              data.active === true
           );
         }
       });

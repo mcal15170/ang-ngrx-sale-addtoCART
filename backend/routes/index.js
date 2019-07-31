@@ -15,8 +15,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "MB",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: true
     },
     {
       id: 2,
@@ -29,8 +30,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FW",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "m"
+      cartPrice: 0,
+      productFor: "m",
+      discount: true
     },
     {
       id: 3,
@@ -43,8 +45,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "HP&SP",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: false
     },
     {
       id: 4,
@@ -57,8 +60,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "m"
+      cartPrice: 0,
+      productFor: "m",
+      discount: false
     },
     {
       id: 5,
@@ -71,8 +75,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "m"
+      cartPrice: 0,
+      productFor: "m",
+      discount: false
     },
     {
       id: 6,
@@ -85,8 +90,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "MB",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: true
     },
     {
       id: 7,
@@ -99,8 +105,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "m"
+      cartPrice: 0,
+      productFor: "m",
+      discount: false
     },
     {
       id: 8,
@@ -113,8 +120,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "HP&SP",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: false
     },
     {
       id: 9,
@@ -127,8 +135,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "m"
+      cartPrice: 0,
+      productFor: "m",
+      discount: false
     },
     {
       id: 10,
@@ -141,8 +150,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "m"
+      cartPrice: 0,
+      productFor: "m",
+      discount: true
     },
     {
       id: 11,
@@ -155,8 +165,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FW",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "m"
+      cartPrice: 0,
+      productFor: "m",
+      discount: false
     },
     {
       id: 12,
@@ -169,8 +180,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "HP&SP",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: true
     },
     {
       id: 13,
@@ -183,8 +195,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "HP&SP",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: true
     },
     {
       id: 14,
@@ -197,8 +210,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FW",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "m"
+      cartPrice: 0,
+      productFor: "m",
+      discount: true
     },
     {
       id: 15,
@@ -211,8 +225,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "MB",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: false
     },
     {
       id: 16,
@@ -225,8 +240,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "HP&SP",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: false
     },
     {
       id: 17,
@@ -239,8 +255,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "MB",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: false
     },
     {
       id: 18,
@@ -253,8 +270,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FW",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "m"
+      cartPrice: 0,
+      productFor: "m",
+      discount: true
     },
     {
       id: 19,
@@ -267,8 +285,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "MB",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: false
     },
     {
       id: 20,
@@ -281,8 +300,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "MB",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: true
     },
     {
       id: 21,
@@ -295,8 +315,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FB",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: false
     },
     {
       id: 22,
@@ -309,8 +330,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FB",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: true
     },
     {
       id: 23,
@@ -320,11 +342,12 @@ router.get("/", function(req, res, next) {
       price: 120,
       qty: 10,
       img: "item23.jpeg",
-      active: true,
+      active: false,
       category: "FB",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: false
     },
     {
       id: 24,
@@ -337,8 +360,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FB",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: true
     },
     {
       id: 25,
@@ -351,8 +375,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FB",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: true
     },
     {
       id: 26,
@@ -365,8 +390,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FB",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: false
     },
     {
       id: 27,
@@ -379,8 +405,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FW",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "m"
+      cartPrice: 0,
+      productFor: "m",
+      discount: false
     },
     {
       id: 28,
@@ -393,8 +420,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FW",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "m"
+      cartPrice: 0,
+      productFor: "m",
+      discount: false
     },
     {
       id: 29,
@@ -407,8 +435,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "m"
+      cartPrice: 0,
+      productFor: "m",
+      discount: false
     },
     {
       id: 30,
@@ -421,8 +450,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FB",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: true
     },
     {
       id: 31,
@@ -435,8 +465,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "KA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: false
     },
     {
       id: 32,
@@ -449,8 +480,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "KA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: true
     },
     {
       id: 33,
@@ -463,8 +495,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "KA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: true
     },
     {
       id: 34,
@@ -477,8 +510,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "KA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: false
     },
     {
       id: 35,
@@ -491,8 +525,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "KA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: false
     },
     {
       id: 36,
@@ -505,8 +540,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "KA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: true
     },
     {
       id: 37,
@@ -519,8 +555,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "KA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: false
     },
     {
       id: 38,
@@ -533,8 +570,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "HP&SP",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: true
     },
     {
       id: 39,
@@ -547,8 +585,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "HP&SP",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: false
     },
     {
       id: 40,
@@ -561,8 +600,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "MB",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "all"
+      cartPrice: 0,
+      productFor: "all",
+      discount: true
     },
     {
       id: 41,
@@ -575,8 +615,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FW",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "f"
+      cartPrice: 0,
+      productFor: "f",
+      discount: true
     },
     {
       id: 42,
@@ -589,8 +630,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FW",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "f"
+      cartPrice: 0,
+      productFor: "f",
+      discount: false
     },
     {
       id: 43,
@@ -603,8 +645,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FW",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "f"
+      cartPrice: 0,
+      productFor: "f",
+      discount: true
     },
     {
       id: 44,
@@ -617,8 +660,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FW",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "f"
+      cartPrice: 0,
+      productFor: "f",
+      discount: false
     },
     {
       id: 45,
@@ -631,8 +675,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FW",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "f"
+      cartPrice: 0,
+      productFor: "f",
+      discount: true
     },
     {
       id: 46,
@@ -645,8 +690,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "f"
+      cartPrice: 0,
+      productFor: "f",
+      discount: false
     },
     {
       id: 47,
@@ -659,8 +705,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "f"
+      cartPrice: 0,
+      productFor: "f",
+      discount: true
     },
     {
       id: 48,
@@ -673,8 +720,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "f"
+      cartPrice: 0,
+      productFor: "f",
+      discount: true
     },
     {
       id: 49,
@@ -687,8 +735,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "f"
+      cartPrice: 0,
+      productFor: "f",
+      discount: true
     },
     {
       id: 50,
@@ -701,8 +750,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "f"
+      cartPrice: 0,
+      productFor: "f",
+      discount: true
     },
     {
       id: 51,
@@ -715,8 +765,9 @@ router.get("/", function(req, res, next) {
       active: true,
       category: "FA",
       cartQty: 0,
-      cartPrice:0,
-      productFor: "f"
+      cartPrice: 0,
+      productFor: "f",
+      discount: true
     }
   ];
   res.send(products);

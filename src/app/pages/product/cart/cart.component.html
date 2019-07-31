@@ -31,10 +31,10 @@
                   <h5 class="card-title">{{ item.title }}</h5>
                 </div>
                 <div class="col-md-3">
-                  <b>Unit Price Rs. {{ item.price }}</b>
+                  <b>Unit Price ₹{{ item.price }}</b>
                 </div>
                 <div class="col-md-3">
-                  <b>Total Rs. {{ item.cartPrice }}</b>
+                  <b>Total ₹{{ item.cartPrice }}</b>
                 </div>
               </div>
               <p class="card-text">{{ item.desc }}</p>
@@ -46,24 +46,30 @@
                   <span>MDXGlobal</span>
                 </div>
                 <div class="col-md-5 price">
-                  <button
-                    class="btn btn-success mr-2  btnUpdateCart"
-                    [id]="'btnIncrese' + item.id"
-                    (click)="
-                      updateCartQty(item.id, 'increse', item.cartQty, item.qty)
-                    "
-                  >
-                    <mat-icon>exposure_plus_1</mat-icon>
-                  </button>
-                  <button
-                    class="btn btn-danger position-fixed btnUpdateCart"
-                    [id]="'btnDescres' + item.id"
-                    (click)="
-                      updateCartQty(item.id, 'decrese', item.cartQty, item.qty)
-                    "
-                  >
-                    <mat-icon>exposure_neg_1</mat-icon>
-                  </button>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <button
+                        class="btn btn-success mr-2  btnUpdateCart"
+                        [id]="'btnIncrese' + item.id"
+                        (click)="
+                          updateCartQty(item.id, 'increse', item.cartQty)
+                        "
+                      >
+                        <mat-icon>exposure_plus_1</mat-icon>
+                      </button>
+                    </div>
+                    <div class="col-md-9">
+                      <button
+                        class="btn btn-danger  btnUpdateCart"
+                        [id]="'btnDescres' + item.id"
+                        (click)="
+                          updateCartQty(item.id, 'decrese', item.cartQty)
+                        "
+                      >
+                        <mat-icon>exposure_neg_1</mat-icon>
+                      </button>
+                    </div>
+                  </div>
                 </div>
                 <div class="col-md-4 qty">Qty {{ item.cartQty }}</div>
                 <div class="col-md-3">

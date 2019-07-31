@@ -75,6 +75,17 @@
 <div class="row">
   <div *ngFor="let item of products$" class="col-md-3 mb-4">
     <div class="card">
+      <ng-template [ngIf]="item.discount">
+        <p class="float-right mb-0 offer-icon" [ngStyle]="{ color: '#2874f0' }">
+          <mat-icon matTooltip="Discount (5%)">local_offer</mat-icon>
+        </p>
+      </ng-template>
+      <!-- <ng-template [ngIf]="!item.discount">
+        <p class="float-right h-4" [ngStyle]="{ color: 'white' }">
+          <mat-icon>local_offer</mat-icon>
+        </p>
+      </ng-template> -->
+
       <div class="imgdiv" width="150px" height="150px">
         <img
           [src]="'../../../../assets/img/product/' + item.img"
@@ -98,9 +109,17 @@
             <span class="_1xZuAn">Offers</span>
             <span>No Cost EMI & 2 More</span>
           </div>
-          <div class="col-md-5 price">Rs. {{ item.price }}</div>
-          <div class="col-md-4 qty">Qty {{ item.qty }}</div>
-          <div class="col-md-3">
+          <div class="col-md-8 price">
+            <ng-template [ngIf]="item.discount">
+              <p class="discount-price mr-1">
+                ₹{{ item.price - (item.price * discountRate) / 100 }}
+              </p>
+            </ng-template>
+            <ng-template [ngIf]="!item.discount">
+              <p class="discount-disable-price mb-0">₹{{ item.price }}</p>
+            </ng-template>
+          </div>
+          <div class="col-md-4 mt-1">
             <button
               (click)="addToCart(item)"
               [ngStyle]="{ display: item.qty === 0 ? 'none' : 'block' }"
@@ -108,6 +127,18 @@
             >
               <i class="fa fa-cart-plus fa-lg"></i>
             </button>
+          </div>
+
+          <div class="col-md-12">
+            <ng-template [ngIf]="item.discount">
+              <span class="orignal-price mr-2">₹ {{ item.price }}</span>
+              <span class="save-rs"
+                >Save ₹{{ (item.price * discountRate) / 100 }}&nbsp;(5%)</span
+              >
+            </ng-template>
+            <ng-template [ngIf]="!item.discount">
+              <span>Note: No Discount Available.</span>
+            </ng-template>
           </div>
         </div>
       </div>
