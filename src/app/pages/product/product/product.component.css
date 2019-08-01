@@ -82,6 +82,7 @@
 
 .offer-icon{
   position: absolute;
+  z-index: 1;
 }
 
 .orignal-price {
