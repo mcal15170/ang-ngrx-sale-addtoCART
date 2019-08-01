@@ -10,4 +10,6 @@ export interface IProduct {
   cartQty: number;
   cartPrice: number;
   productFor: number;
+  discount: boolean;
+  diliveyCharge: boolean;
 }

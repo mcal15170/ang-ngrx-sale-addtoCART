@@ -17,7 +17,11 @@ export class CartComponent implements OnInit {
   cart$: IProduct[];
   product$: IProduct[];
   txtCartQty: number = 0;
-  cartMsg: string = "";
+  cartTotalPrice: number;
+  cartTotalQty: number;
+  diliveryChargeTotleQty: number;
+  fixedShppingCharge: number = 80;
+  cartWithOutDiscountPayment: number;
 
   constructor(public store: Store<IAppState>, public toastr: ToastrService) {}
 
@@ -27,6 +31,22 @@ export class CartComponent implements OnInit {
       .subscribe((data: any) => {
         this.cart$ = data.sales.cart;
         this.product$ = data.sales.products;
+        this.cartTotalPrice = data.sales.cart.reduce(
+          (a, { cartPrice }) => a + cartPrice,
+          0
+        );
+        this.cartWithOutDiscountPayment = data.sales.cart.reduce(
+          (cartWithOutDiscountPayment, p) =>
+            cartWithOutDiscountPayment + p.price * p.cartQty,
+          0
+        );
+        this.cartTotalQty = data.sales.cart.reduce(
+          (a, { cartQty }) => a + cartQty,
+          0
+        );
+        this.diliveryChargeTotleQty = data.sales.cart.filter(
+          item => item.diliveyCharge === true
+        ).length;
       });
   }
 
@@ -44,7 +64,10 @@ export class CartComponent implements OnInit {
     ) {
       if (type === "decrese") {
         document.getElementById("btnDescres" + id).style.display = "none";
-        this.toastr.warning("Minimum 1 qty required per cart product!.", "Opps!");
+        this.toastr.warning(
+          "Minimum 1 qty required per cart product!.",
+          "Opps!"
+        );
       } else {
         document.getElementById("btnIncrese" + id).style.display = "none";
         this.toastr.warning(
@@ -52,9 +75,6 @@ export class CartComponent implements OnInit {
           "Opps!"
         );
       }
-      setTimeout(function() {
-        document.getElementById("cartMsg").innerHTML = "";
-      }, 3000);
     } else {
       this.store.dispatch(new UpdateCartAction(id, type));
       document.getElementById("btnDescres" + id).style.display =

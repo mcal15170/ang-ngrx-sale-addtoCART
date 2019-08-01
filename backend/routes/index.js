@@ -17,7 +17,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 2,
@@ -32,7 +33,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "m",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 3,
@@ -47,7 +49,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 4,
@@ -62,7 +65,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "m",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 5,
@@ -77,7 +81,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "m",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 6,
@@ -92,7 +97,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 7,
@@ -107,7 +113,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "m",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 8,
@@ -122,7 +129,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 9,
@@ -137,7 +145,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "m",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 10,
@@ -152,7 +161,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "m",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 11,
@@ -167,7 +177,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "m",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 12,
@@ -182,7 +193,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 13,
@@ -197,7 +209,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 14,
@@ -212,7 +225,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "m",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 15,
@@ -227,7 +241,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 16,
@@ -242,7 +257,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 17,
@@ -257,7 +273,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 18,
@@ -272,7 +289,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "m",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 19,
@@ -287,7 +305,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 20,
@@ -302,7 +321,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 21,
@@ -317,7 +337,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 22,
@@ -332,7 +353,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 23,
@@ -347,7 +369,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 24,
@@ -362,7 +385,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 25,
@@ -377,7 +401,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 26,
@@ -392,7 +417,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 27,
@@ -407,7 +433,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "m",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 28,
@@ -422,7 +449,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "m",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 29,
@@ -437,7 +465,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "m",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 30,
@@ -452,7 +481,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 31,
@@ -467,7 +497,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 32,
@@ -482,7 +513,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 33,
@@ -497,7 +529,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 34,
@@ -512,7 +545,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 35,
@@ -527,7 +561,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 36,
@@ -542,7 +577,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 37,
@@ -557,7 +593,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 38,
@@ -572,7 +609,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 39,
@@ -587,7 +625,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 40,
@@ -602,7 +641,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "all",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 41,
@@ -617,7 +657,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "f",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 42,
@@ -632,7 +673,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "f",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 43,
@@ -647,7 +689,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "f",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 44,
@@ -662,7 +705,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "f",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 45,
@@ -677,7 +721,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "f",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 46,
@@ -692,7 +737,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "f",
-      discount: false
+      discount: false,
+      diliveyCharge: false
     },
     {
       id: 47,
@@ -707,7 +753,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "f",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 48,
@@ -722,7 +769,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "f",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 49,
@@ -737,7 +785,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "f",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 50,
@@ -752,7 +801,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "f",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     },
     {
       id: 51,
@@ -767,7 +817,8 @@ router.get("/", function(req, res, next) {
       cartQty: 0,
       cartPrice: 0,
       productFor: "f",
-      discount: true
+      discount: true,
+      diliveyCharge: true
     }
   ];
   res.send(products);

@@ -76,7 +76,7 @@
   <div *ngFor="let item of products$" class="col-md-3 mb-4">
     <div class="card">
       <ng-template [ngIf]="item.discount">
-        <p class="float-right mb-0 offer-icon" [ngStyle]="{ color: '#2874f0' }">
+        <p class="float-left mb-0 offer-icon" [ngStyle]="{ color: '#2874f0' }">
           <mat-icon matTooltip="Discount (5%)">local_offer</mat-icon>
         </p>
       </ng-template>

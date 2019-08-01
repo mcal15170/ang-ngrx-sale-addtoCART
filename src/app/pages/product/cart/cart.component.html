@@ -1,95 +1,165 @@
 <div class="row">
-  <div class="col-md-12 card cartHeader">
-    <div class="row">
-      <div class="col-md-4">
-        <h5 class="mt-3">My Cart ({{ cart$.length }})</h5>
-      </div>
-      <div class="col-md-8">
-        <p class="text-danger text-capitalize float-right" id="cartMsg">
-          {{ cartMsg }}
-        </p>
+  <div class="col-md-8">
+    <div class="col-md-12 card cartHeader">
+      <div class="row">
+        <div class="col-md-12">
+          <h5 class="mt-3">My Cart ({{ cart$.length }})</h5>
+        </div>
       </div>
     </div>
-  </div>
-  <ng-template [ngIf]="cart$.length > 0">
-    <div *ngFor="let item of cart$" class="col-md-12 pl-0 pr-0 mb-2">
-      <div class="card">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="imgdiv" width="150px" height="150px">
-              <img
-                [src]="'../../../../assets/img/product/' + item.img"
-                class="pro-img text-center"
-                alt="..."
-              />
-            </div>
-          </div>
-          <div class="col-md-9">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-6">
-                  <h5 class="card-title">{{ item.title }}</h5>
-                </div>
-                <div class="col-md-3">
-                  <b>Unit Price ₹{{ item.price }}</b>
-                </div>
-                <div class="col-md-3">
-                  <b>Total ₹{{ item.cartPrice }}</b>
-                </div>
+    <ng-template [ngIf]="cart$.length > 0">
+      <div *ngFor="let item of cart$" class="col-md-12 pl-0 pr-0 mb-2">
+        <div class="card">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="imgdiv" width="150px" height="150px">
+                <img
+                  [src]="'../../../../assets/img/product/' + item.img"
+                  class="pro-img text-center"
+                  alt="..."
+                />
               </div>
-              <p class="card-text">{{ item.desc }}</p>
             </div>
-            <div class="card-body border-top pt-2">
-              <div class="row">
-                <div class="col-md-12">
-                  <span class="_1xZuAn">Seller :</span>
-                  <span>MDXGlobal</span>
-                </div>
-                <div class="col-md-5 price">
-                  <div class="row">
-                    <div class="col-md-3">
-                      <button
-                        class="btn btn-success mr-2  btnUpdateCart"
-                        [id]="'btnIncrese' + item.id"
-                        (click)="
-                          updateCartQty(item.id, 'increse', item.cartQty)
-                        "
-                      >
-                        <mat-icon>exposure_plus_1</mat-icon>
-                      </button>
-                    </div>
-                    <div class="col-md-9">
-                      <button
-                        class="btn btn-danger  btnUpdateCart"
-                        [id]="'btnDescres' + item.id"
-                        (click)="
-                          updateCartQty(item.id, 'decrese', item.cartQty)
-                        "
-                      >
-                        <mat-icon>exposure_neg_1</mat-icon>
-                      </button>
-                    </div>
+            <div class="col-md-9">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h5 class="card-title">{{ item.title }}</h5>
+                  </div>
+                  <div class="col-md-8">
+                    <p class="mb-0 float-left">
+                      <b>Unit Price ₹{{ item.price }}</b>
+                    </p>
+
+                    <ng-template [ngIf]="item.discount">
+                      <p class="mb-0 float-right"><b>Discount : 5%</b></p>
+                    </ng-template>
+                  </div>
+                  <div class="col-md-4">
+                    <p class="mb-0 float-right">
+                      <b>Total ₹{{ item.cartPrice }}</b>
+                    </p>
                   </div>
                 </div>
-                <div class="col-md-4 qty">Qty {{ item.cartQty }}</div>
-                <div class="col-md-3">
-                  <button
-                    (click)="removeCart(item.id, item.cartQty)"
-                    class="btn btn-dark btnCart"
-                  >
-                    <mat-icon>remove_shopping_cart</mat-icon>&nbsp;<b>REMOVE</b>
-                  </button>
+              </div>
+              <div class="card-body border-top pt-2">
+                <div class="row">
+                  <div class="col-md-12">
+                    <span class="_1xZuAn">Seller :</span>
+                    <span>MDXGlobal</span>
+                  </div>
+                  <div class="col-md-5 price">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <button
+                          class="btn btn-success mr-2  btnUpdateCart"
+                          [id]="'btnIncrese' + item.id"
+                          (click)="
+                            updateCartQty(item.id, 'increse', item.cartQty)
+                          "
+                        >
+                          <mat-icon>exposure_plus_1</mat-icon>
+                        </button>
+                      </div>
+                      <div class="col-md-9">
+                        <button
+                          class="btn btn-danger  btnUpdateCart"
+                          [id]="'btnDescres' + item.id"
+                          (click)="
+                            updateCartQty(item.id, 'decrese', item.cartQty)
+                          "
+                        >
+                          <mat-icon>exposure_neg_1</mat-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 qty">Qty {{ item.cartQty }}</div>
+                  <div class="col-md-3">
+                    <button
+                      (click)="removeCart(item.id, item.cartQty)"
+                      class="btn btn-light text-dark btnCart"
+                    >
+                      Remove
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </ng-template>
+    <ng-template [ngIf]="!cart$.length">
+      <div class="col-md-12 p-3 mb-2">
+        <p class="text-capitalize text-danger">cart not aviable!</p>
+      </div>
+    </ng-template>
+  </div>
+  <div class="col-md-4">
+    <div class="col-md-12  card cartHeader ">
+      <h5 class="mt-3">Price Details</h5>
     </div>
-  </ng-template>
-  <ng-template [ngIf]="!cart$.length">
-    <div class="col-md-12 p-3 mb-2">
-      <p class="text-capitalize text-danger">cart not aviable!</p>
+    <div class="col-md-12  card cartHeader ">
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <p class="mt-3 mb-0 float-left">
+            Price({{ cart$.length }}&nbsp;items)
+          </p>
+        </div>
+        <div class="col-md-8">
+          <p class="mt-3 mb-0 float-right">₹{{ cartTotalPrice }}</p>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <p class="mt-3 mb-0 float-left">Qty({{ cart$.length }}&nbsp;items)</p>
+        </div>
+        <div class="col-md-8">
+          <p class="mt-3 mb-0 float-right">{{ cartTotalQty }}</p>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <p class="mt-3 mb-0 float-left">
+            Delivery Charge({{ diliveryChargeTotleQty }}&nbsp;items)
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p class="mt-3 mb-0 float-right">
+            {{ fixedShppingCharge * diliveryChargeTotleQty }}
+          </p>
+        </div>
+      </div>
+      <div class="row mb-3 border-top">
+        <div class="col-md-6">
+          <p class="mt-3 mb-0 float-left">
+            <b> Total Payable</b>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p class="mt-3 mb-0 float-right">
+            ₹{{ cartTotalPrice + fixedShppingCharge * diliveryChargeTotleQty }}
+          </p>
+        </div>
+      </div>
+
+      <ng-template [ngIf]="cartTotalPrice !== cartWithOutDiscountPayment">
+        <div class="row mb-3 border-top">
+          <div class="col-md-12">
+            <p class="mt-3 mb-0 float-left text-succsess">
+              <b
+                >You will save ₹{{
+                  cartWithOutDiscountPayment -
+                    cartTotalPrice -
+                    fixedShppingCharge * diliveryChargeTotleQty
+                }}
+                on this order</b
+              >
+            </p>
+          </div>
+        </div>
+      </ng-template>
     </div>
-  </ng-template>
+  </div>
 </div>

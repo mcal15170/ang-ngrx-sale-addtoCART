@@ -31,13 +31,20 @@ export function rootReducer(state: any = initialState, action: ProductAction) {
       if (dummyCartIndex < 0) {
         action.payload.cartQty++;
         action.payload.cartPrice =
-          action.payload.cartPrice + action.payload.price;
+          action.payload.cartPrice +
+          (action.payload.discount
+            ? action.payload.price - (action.payload.price * 5) / 100
+            : action.payload.price);
         dummyCart.push(action.payload);
       } else {
         const alredyCart = { ...dummyCart[dummyCartIndex] };
         if (dummyProduct[dummyProductIndex].qty > 0) {
           alredyCart.cartQty++;
-          alredyCart.cartPrice = alredyCart.cartPrice + alredyCart.price;
+          alredyCart.cartPrice =
+            alredyCart.cartPrice +
+            (alredyCart.discount
+              ? alredyCart.price - (alredyCart.price * 5) / 100
+              : alredyCart.price);
         }
         dummyCart[dummyCartIndex] = alredyCart;
       }
