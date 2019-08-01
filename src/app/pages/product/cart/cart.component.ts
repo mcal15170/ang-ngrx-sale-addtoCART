@@ -33,7 +33,7 @@ export class CartComponent implements OnInit {
     this.store.dispatch(new RemoveCartAction(id, qty));
   }
 
-  updateCartQty(id: number, type: string, cartQty: number, qty: number) {
+  updateCartQty(id: number, type: string, cartQty: number,qty:number) {
     const currentCartProductIndex = this.product$.findIndex(
       item => item.id === id
     );
