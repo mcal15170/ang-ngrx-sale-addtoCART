@@ -10,12 +10,12 @@
   <app-product-carousel></app-product-carousel>
 </section>
 
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid mb-4 p-4">
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-3">
         <p>
-          <b>Sort By</b> :
+          <!-- <b>Sort By</b> : -->
           <mat-form-field class="col-md-12">
             <mat-label>Filter Product by category</mat-label>
             <mat-select (selectionChange)="applyFilter($event)">
@@ -27,47 +27,45 @@
           </mat-form-field>
         </p>
       </div>
-      <div class="col-md-2">
-        <button
-          class="btn btn-dark btnLine mr-3"
-          (click)="priceQualityFilter('hight')"
-        >
-          Price -- Low to High
+      <div class="col-md-3">
+        <button class="btn btn-dark btnLine mr-3" (click)="priceQualityFilter('hight')">
+          <mat-icon>flight_takeoff</mat-icon>Price -- Low to High
         </button>
       </div>
-      <div class="col-md-2">
-        <button
-          class="btn btn-dark btnLine"
-          (click)="priceQualityFilter('low')"
-        >
-          Price -- High to Low
+      <div class="col-md-3">
+        <button class="btn btn-dark btnLine" (click)="priceQualityFilter('low')">
+          <mat-icon>flight_land</mat-icon> Price -- High to Low
         </button>
+      </div>
+      <div class="col-md-3">
+        <form class="example-form">
+
+          <mat-form-field class="example-full-width">
+            <!-- <span matPrefix>+1 &nbsp;</span> -->
+            <input type="text" matInput placeholder="General Search">
+            <mat-icon matSuffix>youtube_searched_for</mat-icon>
+          </mat-form-field>
+
+        </form>
+
       </div>
     </div>
-
-    <p class="lead">
-      This is a modified jumbotron that occupies the entire horizontal space of
-      its parent.
-    </p>
   </div>
 </div>
 
 <ng-template [ngIf]="currentFilter === 'FW' || currentFilter === 'FA'">
   <mat-toolbar class="mb-2">
     <label class="mr-2">Filter By</label>
-    <mat-radio-group
-      aria-label="Select an option"
-      (change)="genderFilter($event)"
-    >
-      <mat-radio-button value="m"
-        ><mat-icon>directions_run</mat-icon></mat-radio-button
-      >
-      <mat-radio-button value="f"
-        ><mat-icon>pregnant_woman</mat-icon></mat-radio-button
-      >
-      <mat-radio-button value="all" [checked]="true"
-        ><mat-icon>calendar_view_day</mat-icon></mat-radio-button
-      >
+    <mat-radio-group aria-label="Select an option" (change)="genderFilter($event)">
+      <mat-radio-button value="m">
+        <mat-icon>directions_run</mat-icon>
+      </mat-radio-button>
+      <mat-radio-button value="f">
+        <mat-icon>pregnant_woman</mat-icon>
+      </mat-radio-button>
+      <mat-radio-button value="all" [checked]="true">
+        <mat-icon>calendar_view_day</mat-icon>
+      </mat-radio-button>
     </mat-radio-group>
   </mat-toolbar>
 </ng-template>
@@ -87,16 +85,9 @@
       </ng-template> -->
 
       <div class="imgdiv" width="150px" height="150px">
-        <img
-          [src]="'../../../../assets/img/product/' + item.img"
-          class="pro-img"
-          alt="..."
-        />
+        <img [src]="'../../../../assets/img/product/' + item.img" class="pro-img" alt="..." />
       </div>
-      <div
-        class="outof-stock"
-        [ngStyle]="{ display: item.qty === 0 ? 'block' : 'none' }"
-      >
+      <div class="outof-stock" [ngStyle]="{ display: item.qty === 0 ? 'block' : 'none' }">
         <span class="outof-stock-title">Out Of Stock</span>
       </div>
       <div class="card-body">
@@ -120,11 +111,8 @@
             </ng-template>
           </div>
           <div class="col-md-4 mt-1">
-            <button
-              (click)="addToCart(item)"
-              [ngStyle]="{ display: item.qty === 0 ? 'none' : 'block' }"
-              class="btn btn-dark btnCart"
-            >
+            <button (click)="addToCart(item)" [ngStyle]="{ display: item.qty === 0 ? 'none' : 'block' }"
+              class="btn btn-dark btnCart">
               <i class="fa fa-cart-plus fa-lg"></i>
             </button>
           </div>
@@ -132,9 +120,7 @@
           <div class="col-md-12">
             <ng-template [ngIf]="item.discount">
               <span class="orignal-price mr-2">₹ {{ item.price }}</span>
-              <span class="save-rs"
-                >Save ₹{{ (item.price * discountRate) / 100 }}&nbsp;(5%)</span
-              >
+              <span class="save-rs">Save ₹{{ (item.price * discountRate) / 100 }}&nbsp;(5%)</span>
             </ng-template>
             <ng-template [ngIf]="!item.discount">
               <span>Note: No Discount Available.</span>
