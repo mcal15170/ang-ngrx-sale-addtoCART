@@ -43,11 +43,43 @@ export class ProductComponent implements OnInit {
         .select(state => state)
         .subscribe((data: any) => {
           this.products$ = data.sales.products.filter(
-            item => item.active === true
+            item => item.active === true && item.price.toFixed(2)
           );
         });
       this.products$;
     });
+  }
+
+  generalSerach(value: string) {
+    if (value.length > 0) {
+      this.store
+        .select(state => state)
+        .subscribe((data: any) => {
+          this.products$ = data.sales.products.filter(
+            data =>
+              (data.title.toLowerCase() === value.toLowerCase() ||
+                data.title.toLowerCase().startsWith(value.toLowerCase())) &&
+              data.active === true
+          );
+        });
+    } else {
+      this.store
+        .select(state => state)
+        .subscribe((data: any) => {
+          this.products$ = data.sales.products.filter(
+            item => item.active === true && item.price.toFixed(2)
+          );
+        });
+    }
+    // this.store
+    //   .select(state => state)
+    //   .subscribe((data: any) => {
+    //     this.products$ = data.sales.products.filter(
+    //       data =>
+    //         data.title.toLowerCase() === this.txtSerachKey &&
+    //         data.active === true
+    //     );
+    //   });
   }
 
   applyFilter(event) {

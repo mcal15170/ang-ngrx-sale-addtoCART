@@ -28,7 +28,7 @@
                   </div>
                   <div class="col-md-8">
                     <p class="mb-0 float-left">
-                      <b>Unit Price ₹{{ item.price }}</b>
+                      <b>Unit Price ₹{{ item.price | number: "1.2-2" }}</b>
                     </p>
 
                     <ng-template [ngIf]="item.discount">
@@ -37,7 +37,7 @@
                   </div>
                   <div class="col-md-4">
                     <p class="mb-0 float-right">
-                      <b>Total ₹{{ item.cartPrice }}</b>
+                      <b>Total ₹{{ item.cartPrice | number: "1.2-2" }}</b>
                     </p>
                   </div>
                 </div>
@@ -108,7 +108,9 @@
           </p>
         </div>
         <div class="col-md-8">
-          <p class="mt-3 mb-0 float-right">₹{{ cartTotalPrice }}</p>
+          <p class="mt-3 mb-0 float-right">
+            ₹{{ cartTotalPrice | number: "1.2-2" }}
+          </p>
         </div>
       </div>
       <div class="row mb-3">
@@ -127,7 +129,7 @@
         </div>
         <div class="col-md-6">
           <p class="mt-3 mb-0 float-right">
-            {{ fixedShppingCharge * diliveryChargeTotleQty }}
+            {{ fixedShppingCharge * diliveryChargeTotleQty | number: "1.2-2" }}
           </p>
         </div>
       </div>
@@ -139,23 +141,25 @@
         </div>
         <div class="col-md-6">
           <p class="mt-3 mb-0 float-right">
-            ₹{{ cartTotalPrice + fixedShppingCharge * diliveryChargeTotleQty }}
+            ₹{{
+              cartTotalPrice + fixedShppingCharge * diliveryChargeTotleQty
+                | number: "1.2-2"
+            }}
           </p>
         </div>
       </div>
 
-      <ng-template [ngIf]="cartTotalPrice !== cartWithOutDiscountPayment">
+      <ng-template [ngIf]="cartWithOutDiscountPayment > cartTotalPrice">
         <div class="row mb-3 border-top">
           <div class="col-md-12">
             <p class="mt-3 mb-0 float-left text-succsess">
               <b
                 >You will save ₹{{
-                  cartWithOutDiscountPayment -
-                    cartTotalPrice -
-                    (fixedShppingCharge * diliveryChargeTotleQty)
+                  cartWithOutDiscountPayment - cartTotalPrice | number: "1.2-2"
                 }}
                 on this order</b
               >
+              <!-- fixedShppingCharge * diliveryChargeTotleQty -->
             </p>
           </div>
         </div>
