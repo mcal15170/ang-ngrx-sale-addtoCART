@@ -88,3 +88,7 @@
 .orignal-price {
   text-decoration: line-through;
 }
+
+section .filterSection{
+  background-color: #f5f5f5;
+}

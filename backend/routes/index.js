@@ -364,7 +364,7 @@ router.get("/", function(req, res, next) {
       price: 120,
       qty: 10,
       img: "item23.jpeg",
-      active: false,
+      active: true,
       category: "FB",
       cartQty: 0,
       cartPrice: 0,
