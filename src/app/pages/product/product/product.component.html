@@ -98,7 +98,8 @@
       </ng-template> -->
 
         <div class="imgdiv" width="150px" height="150px">
-          <img [src]="'../../../../assets/img/product/' + item.img" class="pro-img" alt="..." />
+          <img [src]="'../../../../assets/img/product/' + item.img" class="pro-img" alt="..."
+            [ngClass]="{'blurImg':item.qty === 0 ? true : false }" />
         </div>
         <div class="outof-stock" [ngStyle]="{ display: item.qty === 0 ? 'block' : 'none' }">
           <span class="outof-stock-title">Out Of Stock</span>
