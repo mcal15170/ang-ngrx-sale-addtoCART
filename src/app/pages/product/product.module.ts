@@ -15,6 +15,7 @@ import {ProductCarouselComponent} from './product-carousel/product-carousel.comp
 import {ProductAdvetisementComponent} from './product-advetisement/product-advetisement.component';
 import {ProductBannerComponent} from './product-banner/product-banner.component';
 import {ToastrModule} from 'ngx-toastr';
+import { ProductOfferComponent } from './product-offer/product-offer.component';
 
 @NgModule({
   imports: [
@@ -42,6 +43,7 @@ import {ToastrModule} from 'ngx-toastr';
     ProductCarouselComponent,
     ProductAdvetisementComponent,
     ProductBannerComponent,
+    ProductOfferComponent,
   ],
   providers: [MyProductService],
 })

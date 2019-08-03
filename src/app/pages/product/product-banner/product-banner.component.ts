@@ -22,19 +22,19 @@ export class ProductBannerComponent implements OnInit {
 
     {
       path:
-        'https://rukminim1.flixcart.com/flap/1688/280/image/e1a2287ab89ea1a9.jpg?q=50',
+        'https://rukminim1.flixcart.com/flap/1688/280/image/fae350ddc56ee425.jpg?q=50',
       alt: 'London',
       active: false,
     },
     {
       path:
-        'https://rukminim1.flixcart.com/flap/1688/280/image/6f4d657f0fb5878b.jpg?q=50',
+        'https://rukminim1.flixcart.com/flap/1688/280/image/9755c1733f78385f.jpg?q=50',
       alt: 'New york',
       active: false,
     },
     {
       path:
-        'https://rukminim1.flixcart.com/flap/1688/280/image/312524dba55d4d65.jpg?q=50',
+        'https://rukminim1.flixcart.com/flap/1688/280/image/c85581b9f5c5c5e8.jpg?q=50',
       alt: 'China',
       active: false,
     },

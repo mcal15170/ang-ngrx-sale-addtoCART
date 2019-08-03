@@ -11,7 +11,7 @@ import {IProduct} from '../../store/models/product.model';
 export class ProductCarouselComponent implements OnInit {
   products$: IProduct[];
   slides: any = [[]];
-  productPerSection: number = 3;
+  productPerSection: number = 6;
   boostrapDiv: number = 12 / this.productPerSection;
 
   constructor(public store: Store<IAppState>) {}
@@ -20,7 +20,7 @@ export class ProductCarouselComponent implements OnInit {
     this.store
       .select(state => state)
       .subscribe((data: any) => {
-        this.products$ = data.sales.products.slice(10, 22);
+        this.products$ = data.sales.products.slice(10, 40);
         if (this.products$.length > 0) {
           this.slides = this.chunk(this.products$, this.productPerSection);
           console.log(this.slides);

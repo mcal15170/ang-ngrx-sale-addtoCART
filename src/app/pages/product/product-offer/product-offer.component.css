@@ -1,0 +1,18 @@
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  height: 74px;
+}
+
+.carousel-control-prev-icon {
+  margin-right: 35px;
+}
+
+.carousel-control-next-icon {
+  margin-left: 35px;
+}

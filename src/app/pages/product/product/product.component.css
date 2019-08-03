@@ -94,5 +94,6 @@ section .filterSection{
 }
 
 .blurImg{
-  filter: blur(5px);
+  filter: blur(5px) grayscale(20%);
+  
 }

@@ -26,8 +26,7 @@
   text-overflow: ellipsis;
 }
 
-.price,
-.qty {
+.price {
   color: #388e3c;
   padding-top: 10px;
 }
@@ -62,5 +61,5 @@
 }
 
 .tradMArkIcon{
-  height: 21px;
+  height: 15px;
 }
