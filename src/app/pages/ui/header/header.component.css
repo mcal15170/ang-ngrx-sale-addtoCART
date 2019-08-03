@@ -1,7 +1,14 @@
-.mainMenu{
-    background-color: #2874f0;
+.mainMenu {
+  background-color: #e40046;
+  width: 100%;
 }
 
 .mainMenu a {
-    color: #fff
+  color: #fff;
+}
+
+.headerData {
+  padding-right: 111px;
+  padding-left: 111px;
+  width: 100%;
 }

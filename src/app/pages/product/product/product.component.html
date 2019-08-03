@@ -14,55 +14,77 @@
   <app-product-offer></app-product-offer>
 </section>
 <section class="mb-4">
-  <div class="jumbotron jumbotron-fluid mb-2 pt-4 pr-0 pl-0 bg-white  pb-0 filterSection">
+  <div
+    class="jumbotron jumbotron-fluid mb-2 pt-4 pr-0 pl-0 bg-white  pb-0 filterSection"
+  >
     <div class="container">
       <div class="row">
         <div class="col-md-3">
           <p>
-            <!-- <b>Sort By</b> : -->
+            <b><i class="fa fa-filter"></i></b>
             <mat-form-field class="col-md-12 pr-0 pl-0">
               <mat-label>Filter Product by category</mat-label>
               <mat-select (selectionChange)="applyFilter($event)">
-                <mat-option *ngFor="let filter of filters" [value]="filter.value">
+                <mat-option
+                  *ngFor="let filter of filters"
+                  [value]="filter.value"
+                >
                   {{ filter.viewValue
-                }}<mat-icon class="float-right">{{ filter.icon }}</mat-icon>
+                  }}<mat-icon class="float-right">{{ filter.icon }}</mat-icon>
                 </mat-option>
               </mat-select>
             </mat-form-field>
           </p>
         </div>
         <div class="col-md-3">
-          <button class="btn btn-dark btnLine" (click)="priceQualityFilter('hight')">
+          <button
+            class="btn btn-dark btnLine"
+            (click)="priceQualityFilter('hight')"
+          >
             <mat-icon>flight_takeoff</mat-icon>&nbsp;Price -- Low to High
           </button>
         </div>
         <div class="col-md-3">
-          <button class="btn btn-dark btnLine" (click)="priceQualityFilter('low')">
+          <button
+            class="btn btn-dark btnLine"
+            (click)="priceQualityFilter('low')"
+          >
             <mat-icon>flight_land</mat-icon>&nbsp;Price -- High to Low
           </button>
         </div>
         <div class="col-md-3">
           <mat-form-field class="example-full-width pr-0 pl-0">
             <!-- <span matPrefix>+1 &nbsp;</span> -->
-            <input type="text" #txtSerachKey (keyup)="generalSerach(txtSerachKey.value)" matInput
-              placeholder="Search for product & brand" />
+            <input
+              type="text"
+              #txtSerachKey
+              (keyup)="generalSerach(txtSerachKey.value)"
+              matInput
+              placeholder="Search for product & brand"
+            />
             <!-- <mat-icon matSuffix>youtube_searched_for</mat-icon> -->
             <mat-icon matSuffix>close</mat-icon>
           </mat-form-field>
         </div>
-
       </div>
     </div>
   </div>
 
-
   <mat-toolbar class="bg-white">
     <div class="row" style="width: 100%">
       <div class="col-md-9">
-        <ng-template [ngIf]="(currentFilter === 'FW' || currentFilter === 'FA') && totalProduct > 0">
+        <ng-template
+          [ngIf]="
+            (currentFilter === 'FW' || currentFilter === 'FA') &&
+            totalProduct > 0
+          "
+        >
           <p class="mb-2 mt-2">
             <label class="mr-2">Filter By</label>
-            <mat-radio-group aria-label="Select an option" (change)="genderFilter($event)">
+            <mat-radio-group
+              aria-label="Select an option"
+              (change)="genderFilter($event)"
+            >
               <mat-radio-button value="m">
                 <mat-icon>directions_run</mat-icon>
               </mat-radio-button>
@@ -78,11 +100,10 @@
       </div>
       <div class="col-md-3">
         <p class="text-center  mb-2 mt-2" style="font-size: 16px">
-          Total Product: <b>{{totalProduct}}</b>
+          Total Product: <b>{{ totalProduct }}</b>
         </p>
       </div>
     </div>
-
   </mat-toolbar>
 </section>
 
@@ -91,7 +112,10 @@
     <div *ngFor="let item of products$" class="col-md-3 mb-4">
       <div class="card">
         <ng-template [ngIf]="item.discount">
-          <p class="float-left mb-0 offer-icon" [ngStyle]="{ color: '#2874f0' }">
+          <p
+            class="float-left mb-0 offer-icon"
+            [ngStyle]="{ color: '#2874f0' }"
+          >
             <mat-icon matTooltip="Discount (5%)">local_offer</mat-icon>
           </p>
         </ng-template>
@@ -102,10 +126,17 @@
       </ng-template> -->
 
         <div class="imgdiv" width="150px" height="150px">
-          <img [src]="'../../../../assets/img/product/' + item.img" class="pro-img" alt="..."
-            [ngClass]="{'blurImg':item.qty === 0 ? true : false }" />
+          <img
+            [src]="'../../../../assets/img/product/' + item.img"
+            class="pro-img"
+            alt="..."
+            [ngClass]="{ blurImg: item.qty === 0 ? true : false }"
+          />
         </div>
-        <div class="outof-stock" [ngStyle]="{ display: item.qty === 0 ? 'block' : 'none' }">
+        <div
+          class="outof-stock"
+          [ngStyle]="{ display: item.qty === 0 ? 'block' : 'none' }"
+        >
           <span class="outof-stock-title">Out Of Stock</span>
         </div>
         <div class="card-body">
@@ -134,18 +165,25 @@
               </ng-template>
             </div>
             <div class="col-md-4 mt-1">
-              <button (click)="addToCart(item)" [ngStyle]="{ display: item.qty === 0 ? 'none' : 'block' }"
-                class="btn btn-dark btnCart">
+              <button
+                (click)="addToCart(item)"
+                [ngStyle]="{ display: item.qty === 0 ? 'none' : 'block' }"
+                class="btn btn-dark btnCart"
+              >
                 <i class="fa fa-cart-plus fa-lg"></i>
               </button>
             </div>
 
             <div class="col-md-12">
               <ng-template [ngIf]="item.discount">
-                <span class="orignal-price mr-2">₹ {{ item.price | number: "1.2-2" }}</span>
-                <span class="save-rs">Save ₹{{
+                <span class="orignal-price mr-2"
+                  >₹ {{ item.price | number: "1.2-2" }}</span
+                >
+                <span class="save-rs"
+                  >Save ₹{{
                     (item.price * discountRate) / 100 | number: "1.2-2"
-                  }}&nbsp;(5%)</span>
+                  }}&nbsp;(5%)</span
+                >
               </ng-template>
               <ng-template [ngIf]="!item.discount">
                 <span>Note: No Discount Available.</span>
