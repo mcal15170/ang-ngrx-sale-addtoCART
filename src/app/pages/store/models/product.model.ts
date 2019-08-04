@@ -12,4 +12,5 @@ export interface IProduct {
   productFor: number;
   discount: boolean;
   diliveyCharge: boolean;
+  tags: any[];
 }

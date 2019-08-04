@@ -108,7 +108,6 @@ export class ProductOfferComponent implements OnInit {
   ngOnInit() {
     if (this.itemsOffer$.length > 0) {
       this.slides = this.chunk(this.itemsOffer$, this.productPerSection);
-      console.log(this.slides, 'hhhhhhhhhhhhhhhhh');
     }
   }
 

@@ -5,7 +5,8 @@ export enum ProdcutType {
   ADD_PRODUCT = "ADD_PRODUCT",
   ADD_TO_CART = "ADD_TO_CART",
   REMOVE_CART = "REMOVE_CART",
-  UPDATE_CART = "UPDATE_CART"
+  UPDATE_CART = "UPDATE_CART",
+  ADD_FILTER_DATA = "ADD_FILTER_DATA"
 }
 
 export class AddProductAction implements Action {
@@ -32,8 +33,15 @@ export class UpdateCartAction implements Action {
   constructor(public id: number, public qtyType: string) {}
 }
 
+export class AddFilterAction implements Action {
+  readonly type = ProdcutType.ADD_FILTER_DATA;
+
+  constructor(public payload: any[]) {}
+}
+
 export type ProductAction =
   | AddProductAction
   | ADDToCartAction
   | RemoveCartAction
+  | AddFilterAction
   | UpdateCartAction;

@@ -1,10 +1,58 @@
-<section class="mb-4">
-  <app-product-banner></app-product-banner>
-</section>
+<div class="row">
+  <div class="col-md-2 filter-panel pr-0">
+    <mat-accordion>
+      <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon style="color:darkred">storage</mat-icon>&nbsp;<span class="mt-1">Categories</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ul class="list-group list-group-flush">
+          <ng-container *ngFor="let item of filters">
+            <li
+              class="list-group-item"
+              [ngStyle]="{
+                display: item.value === 'All' ? 'none' : 'inline-grid'
+              }"
+            >
+              <a
+                class="productFilterLink mr-0"
+                [routerLink]="['/product-list', item.value]"
+                queryParamsHandling="merge"
+                >{{ item.viewValue }}</a
+              >
+            </li>
+          </ng-container>
+        </ul>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <img
+              src="../../../../assets//img/product/offer.png"
+              height="25px"
+              width="25px"
+            />&nbsp;<span class="mt-1">Top Offers</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <div class="col-md-10">
+    <section class="mb-4">
+      <app-product-banner></app-product-banner>
+    </section>
 
-<section class="mb-4">
-  <app-product-advetisement></app-product-advetisement>
-</section>
+    <section class="mb-4">
+      <app-product-advetisement></app-product-advetisement>
+    </section>
+  </div>
+</div>
 
 <section class="mb-4">
   <app-product-carousel></app-product-carousel>
@@ -13,6 +61,7 @@
 <section class="mb-4">
   <app-product-offer></app-product-offer>
 </section>
+
 <section class="mb-4">
   <div
     class="jumbotron jumbotron-fluid mb-2 pt-4 pr-0 pl-0 bg-white  pb-0 filterSection"
@@ -88,6 +137,9 @@
               <mat-radio-button value="m">
                 <mat-icon>directions_run</mat-icon>
               </mat-radio-button>
+              <mat-radio-button value="c">
+                <mat-icon>child_care</mat-icon>
+              </mat-radio-button>
               <mat-radio-button value="f">
                 <mat-icon>pregnant_woman</mat-icon>
               </mat-radio-button>
@@ -126,12 +178,17 @@
       </ng-template> -->
 
         <div class="imgdiv" width="150px" height="150px">
-          <img
-            [src]="'../../../../assets/img/product/' + item.img"
-            class="pro-img"
-            alt="..."
-            [ngClass]="{ blurImg: item.qty === 0 ? true : false }"
-          />
+          <a
+            [routerLink]="['/product-detail', item.id]"
+            queryParamsHandling="merge"
+          >
+            <img
+              [src]="'../../../../assets/img/product/' + item.img"
+              class="pro-img"
+              alt="..."
+              [ngClass]="{ blurImg: item.qty === 0 ? true : false }"
+            />
+          </a>
         </div>
         <div
           class="outof-stock"
@@ -141,13 +198,23 @@
         </div>
         <div class="card-body">
           <h5 class="card-title">{{ item.title }}</h5>
-          <p class="card-text">{{ item.desc }}</p>
+          <p class="card-text">
+            <b>{{ item.id }}</b>
+          </p>
+          <!-- <p class="card-text">{{ item.desc }}</p> -->
         </div>
         <div class="card-body border-top pt-2">
           <div class="row">
-            <div class="col-md-12">
+            <!-- <div class="col-md-12">
               <span class="_1xZuAn">Offers</span>
               <span>No Cost EMI & 2 More</span>
+            </div> -->
+            <div class="col-md-12">
+              <ul>
+                <li *ngFor="let data of item.tags">
+                  {{ data.name }}&nbsp; =&nbsp; {{ data.value }}
+                </li>
+              </ul>
             </div>
             <div class="col-md-8 price">
               <ng-template [ngIf]="item.discount">

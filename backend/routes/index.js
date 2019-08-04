@@ -18,7 +18,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "samsung" },
+        { name: "ram", value: "4gb" },
+        { name: "network_type", value: "2g" },
+        { name: "os", value: "android" },
+        { name: "offer", value: "bank offer" }
+      ]
     },
     {
       id: 2,
@@ -34,7 +41,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "m",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "sparx" },
+        { name: "color", value: "silver" },
+        { name: "ideal_for", value: "male" },
+        { name: "offer", value: "bank offer" }
+      ]
     },
     {
       id: 3,
@@ -50,7 +63,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "sony" },
+        { name: "color", value: "black" },
+        { name: "wired_type", value: "wireless" },
+        { name: "offer", value: "no cost EMI" }
+      ]
     },
     {
       id: 4,
@@ -66,7 +85,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "m",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "fastrack" },
+        { name: "ideal_for", value: "male" },
+        { name: "shape", value: "round" },
+        { name: "color", value: "red" },
+        { name: "offer", value: "bank offer" }
+      ]
     },
     {
       id: 5,
@@ -82,7 +108,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "m",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "fastrack" },
+        { name: "ideal_for", value: "male" },
+        { name: "shape", value: "round" },
+        { name: "color", value: "black" },
+        { name: "offer", value: "no cost EMI" }
+      ]
     },
     {
       id: 6,
@@ -98,7 +131,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "redmi" },
+        { name: "ram", value: "4gb" },
+        { name: "network_type", value: "4g" },
+        { name: "os", value: "android" },
+        { name: "offer", value: "bank offer" }
+      ]
     },
     {
       id: 7,
@@ -114,7 +154,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "m",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "timex" },
+        { name: "ideal_for", value: "male" },
+        { name: "shape", value: "squre" },
+        { name: "color", value: "silver" },
+        { name: "offer", value: "no cost EMI" }
+      ]
     },
     {
       id: 8,
@@ -130,7 +177,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "sony" },
+        { name: "color", value: "blue" },
+        { name: "wired_type", value: "wireless" },
+        { name: "offer", value: "special price" }
+      ]
     },
     {
       id: 9,
@@ -146,7 +199,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "m",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "timex" },
+        { name: "ideal_for", value: "male" },
+        { name: "shape", value: "ovel" },
+        { name: "color", value: "silver" },
+        { name: "offer", value: "bank offer" }
+      ]
     },
     {
       id: 10,
@@ -162,7 +222,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "m",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "diesel" },
+        { name: "ideal_for", value: "male" },
+        { name: "shape", value: "ovel" },
+        { name: "color", value: "black" },
+        { name: "offer", value: "special price" }
+      ]
     },
     {
       id: 11,
@@ -178,7 +245,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "m",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "woodland" },
+        { name: "color", value: "brown" },
+        { name: "ideal_for", value: "male" },
+        { name: "offer", value: "special price" }
+      ]
     },
     {
       id: 12,
@@ -194,7 +267,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "jbl" },
+        { name: "color", value: "black" },
+        { name: "wired_type", value: "wireless" },
+        { name: "offer", value: "bank offer" }
+      ]
     },
     {
       id: 13,
@@ -210,7 +289,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "jbl" },
+        { name: "color", value: "white" },
+        { name: "wired_type", value: "wireless" },
+        { name: "offer", value: "no cost EMI" }
+      ]
     },
     {
       id: 14,
@@ -226,7 +311,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "m",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "nike" },
+        { name: "color", value: "black" },
+        { name: "ideal_for", value: "male" },
+        { name: "offer", value: "no cost EMI" }
+      ]
     },
     {
       id: 15,
@@ -242,7 +333,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "vivo" },
+        { name: "ram", value: "3gb" },
+        { name: "network_type", value: "4g" },
+        { name: "os", value: "ios" },
+        { name: "offer", value: "exchange offer" }
+      ]
     },
     {
       id: 16,
@@ -258,7 +356,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "philips" },
+        { name: "color", value: "white" },
+        { name: "wired_type", value: "wired" },
+        { name: "offer", value: "bank offer" }
+      ]
     },
     {
       id: 17,
@@ -274,7 +378,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "realme" },
+        { name: "ram", value: "6gb" },
+        { name: "network_type", value: "3g" },
+        { name: "os", value: "android" },
+        { name: "offer", value: "no cost EMI" }
+      ]
     },
     {
       id: 18,
@@ -290,7 +401,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "m",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "nike" },
+        { name: "color", value: "blue" },
+        { name: "ideal_for", value: "male" },
+        { name: "offer", value: "bank offer" }
+      ]
     },
     {
       id: 19,
@@ -306,7 +423,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "honer" },
+        { name: "ram", value: "6gb" },
+        { name: "network_type", value: "4g" },
+        { name: "os", value: "ios" },
+        { name: "offer", value: "no cost EMI" }
+      ]
     },
     {
       id: 20,
@@ -322,7 +446,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "samsung" },
+        { name: "ram", value: "3gb" },
+        { name: "network_type", value: "3g" },
+        { name: "os", value: "android" },
+        { name: "offer", value: "bank offer" }
+      ]
     },
     {
       id: 21,
@@ -338,7 +469,12 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "bharat" },
+        { name: "material", value: "bamboo" },
+        { name: "offer", value: "special price" }
+      ]
     },
     {
       id: 22,
@@ -354,7 +490,12 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "bharat" },
+        { name: "material", value: "bamboo" },
+        { name: "offer", value: "special price" }
+      ]
     },
     {
       id: 23,
@@ -370,7 +511,12 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "hometown" },
+        { name: "material", value: "leather" },
+        { name: "offer", value: "bank offer" }
+      ]
     },
     {
       id: 24,
@@ -386,7 +532,12 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "nilkamal" },
+        { name: "material", value: "leather" },
+        { name: "offer", value: "exchange offer" }
+      ]
     },
     {
       id: 25,
@@ -402,7 +553,12 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "hometown" },
+        { name: "material", value: "solidwood" },
+        { name: "offer", value: "bank offer" }
+      ]
     },
     {
       id: 26,
@@ -418,7 +574,12 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "nilkamal" },
+        { name: "material", value: "leather" },
+        { name: "offer", value: "special price" }
+      ]
     },
     {
       id: 27,
@@ -434,7 +595,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "m",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "puma" },
+        { name: "color", value: "brown" },
+        { name: "ideal_for", value: "male" },
+        { name: "offer", value: "bank offer" }
+      ]
     },
     {
       id: 28,
@@ -450,7 +617,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "m",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "puma" },
+        { name: "color", value: "blue" },
+        { name: "ideal_for", value: "male" },
+        { name: "offer", value: "exchange offer" }
+      ]
     },
     {
       id: 29,
@@ -466,7 +639,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "m",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "diesel" },
+        { name: "ideal_for", value: "male" },
+        { name: "shape", value: "round" },
+        { name: "color", value: "silver" },
+        { name: "offer", value: "special price" }
+      ]
     },
     {
       id: 30,
@@ -482,7 +662,12 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "nilkamal" },
+        { name: "material", value: "solidwood" },
+        { name: "offer", value: "buy more save more" }
+      ]
     },
     {
       id: 31,
@@ -498,7 +683,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "dawan" },
+        { name: "color", value: "pink" },
+        { name: "material", value: "plastic" },
+        { name: "offer", value: "exchange offer" }
+      ]
     },
     {
       id: 32,
@@ -514,7 +705,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "dawan" },
+        { name: "color", value: "blue" },
+        { name: "material", value: "nonstick" },
+        { name: "offer", value: "special price" }
+      ]
     },
     {
       id: 33,
@@ -530,7 +727,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "kumka" },
+        { name: "color", value: "silver" },
+        { name: "material", value: "still" },
+        { name: "offer", value: "special price" }
+      ]
     },
     {
       id: 34,
@@ -546,7 +749,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "kumka" },
+        { name: "color", value: "pink" },
+        { name: "material", value: "plastic" },
+        { name: "offer", value: "exchange offer" }
+      ]
     },
     {
       id: 35,
@@ -562,7 +771,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "kumka" },
+        { name: "color", value: "blue" },
+        { name: "material", value: "plastic" },
+        { name: "offer", value: "special price" }
+      ]
     },
     {
       id: 36,
@@ -578,7 +793,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "kumka" },
+        { name: "color", value: "silver" },
+        { name: "material", value: "still" },
+        { name: "offer", value: "exchange offer" }
+      ]
     },
     {
       id: 37,
@@ -594,7 +815,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "dawan" },
+        { name: "color", value: "blue" },
+        { name: "material", value: "nonstick" },
+        { name: "offer", value: "special price" }
+      ]
     },
     {
       id: 38,
@@ -610,7 +837,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "sony" },
+        { name: "color", value: "blue" },
+        { name: "wired_type", value: "both" },
+        { name: "offer", value: "buy more save more" }
+      ]
     },
     {
       id: 39,
@@ -626,7 +859,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "philips" },
+        { name: "color", value: "black" },
+        { name: "wired_type", value: "wired" },
+        { name: "offer", value: "exchange offer" }
+      ]
     },
     {
       id: 40,
@@ -642,7 +881,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "all",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "realme" },
+        { name: "ram", value: "4gb" },
+        { name: "network_type", value: "4g" },
+        { name: "os", value: "ios" },
+        { name: "offer", value: "buy more save more" }
+      ]
     },
     {
       id: 41,
@@ -658,7 +904,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "f",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "nike" },
+        { name: "color", value: "red" },
+        { name: "ideal_for", value: "female" },
+        { name: "offer", value: "exchange offer" }
+      ]
     },
     {
       id: 42,
@@ -674,7 +926,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "f",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "woodland" },
+        { name: "color", value: "brown" },
+        { name: "ideal_for", value: "female" },
+        { name: "offer", value: "exchange offer" }
+      ]
     },
     {
       id: 43,
@@ -690,7 +948,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "f",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "sparx" },
+        { name: "color", value: "red" },
+        { name: "ideal_for", value: "female" },
+        { name: "offer", value: "exchange offer" }
+      ]
     },
     {
       id: 44,
@@ -706,7 +970,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "f",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "puma" },
+        { name: "color", value: "brown" },
+        { name: "ideal_for", value: "female" },
+        { name: "offer", value: "buy more save more" }
+      ]
     },
     {
       id: 45,
@@ -722,7 +992,13 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "f",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "puma" },
+        { name: "color", value: "brown" },
+        { name: "ideal_for", value: "female" },
+        { name: "offer", value: "exchange offer" }
+      ]
     },
     {
       id: 46,
@@ -738,7 +1014,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "f",
       discount: false,
-      diliveyCharge: false
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "skmei" },
+        { name: "ideal_for", value: "female" },
+        { name: "shape", value: "round" },
+        { name: "color", value: "blue" },
+        { name: "offer", value: "exchange offer" }
+      ]
     },
     {
       id: 47,
@@ -754,7 +1037,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "f",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "skmei" },
+        { name: "ideal_for", value: "femal" },
+        { name: "shape", value: "round" },
+        { name: "color", value: "black" },
+        { name: "offer", value: "exchange offer" }
+      ]
     },
     {
       id: 48,
@@ -770,7 +1060,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "f",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "fastrack" },
+        { name: "ideal_for", value: "female" },
+        { name: "shape", value: "ovel" },
+        { name: "color", value: "red" },
+        { name: "offer", value: "bank offer" }
+      ]
     },
     {
       id: 49,
@@ -786,7 +1083,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "f",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "fastrack" },
+        { name: "ideal_for", value: "female" },
+        { name: "shape", value: "squre" },
+        { name: "color", value: "blue" },
+        { name: "offer", value: "buy more save more" }
+      ]
     },
     {
       id: 50,
@@ -802,7 +1106,14 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "f",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "timex" },
+        { name: "ideal_for", value: "female" },
+        { name: "shape", value: "squre" },
+        { name: "color", value: "pink" },
+        { name: "offer", value: "exchange offer" }
+      ]
     },
     {
       id: 51,
@@ -818,7 +1129,307 @@ router.get("/", function(req, res, next) {
       cartPrice: 0,
       productFor: "f",
       discount: true,
-      diliveyCharge: true
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "timex" },
+        { name: "ideal_for", value: "female" },
+        { name: "shape", value: "squre" },
+        { name: "color", value: "blue" },
+        { name: "offer", value: "buy more save more" }
+      ]
+    },
+    {
+      id: 52,
+      title: "Girls Slip on Casual Boots",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+      price: 450,
+      qty: 10,
+      img: "item52.jpeg",
+      active: true,
+      category: "FW",
+      cartQty: 0,
+      cartPrice: 0,
+      productFor: "c",
+      discount: true,
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "smartots" },
+        { name: "color", value: "red" },
+        { name: "ideal_for", value: "child" },
+        { name: "offer", value: "buy more save more" }
+      ]
+    },
+    {
+      id: 53,
+      title: "Begetter The Inceptioner",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+      price: 980,
+      qty: 10,
+      img: "item53.jpeg",
+      active: true,
+      category: "FW",
+      cartQty: 0,
+      cartPrice: 0,
+      productFor: "c",
+      discount: true,
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "smartots" },
+        { name: "color", value: "blue" },
+        { name: "ideal_for", value: "child" },
+        { name: "offer", value: "exchange offer" }
+      ]
+    },
+    {
+      id: 54,
+      title: "SMARTOTS",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+      price: 867,
+      qty: 10,
+      img: "item54.jpeg",
+      active: true,
+      category: "FW",
+      cartQty: 0,
+      cartPrice: 0,
+      productFor: "c",
+      discount: false,
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "smartots" },
+        { name: "color", value: "blue" },
+        { name: "ideal_for", value: "child" },
+        { name: "offer", value: "buy more save more" }
+      ]
+    },
+    {
+      id: 55,
+      title: "Begetter The Inceptioner",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+      price: 234,
+      qty: 10,
+      img: "item55.jpeg",
+      active: true,
+      category: "FW",
+      cartQty: 0,
+      cartPrice: 0,
+      productFor: "c",
+      discount: true,
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "neobaby" },
+        { name: "color", value: "red" },
+        { name: "ideal_for", value: "child" },
+        { name: "offer", value: "no cost EMI" }
+      ]
+    },
+    {
+      id: 56,
+      title: "NEOBABY",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+      price: 340,
+      qty: 10,
+      img: "item56.jpeg",
+      active: true,
+      category: "FW",
+      cartQty: 0,
+      cartPrice: 0,
+      productFor: "c",
+      discount: false,
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "neobaby" },
+        { name: "color", value: "red" },
+        { name: "ideal_for", value: "child" },
+        { name: "offer", value: "buy more save more" }
+      ]
+    },
+    {
+      id: 57,
+      title: "NEOBABY",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+      price: 860,
+      qty: 10,
+      img: "item57.jpeg",
+      active: true,
+      category: "FW",
+      cartQty: 0,
+      cartPrice: 0,
+      productFor: "c",
+      discount: true,
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "neobaby" },
+        { name: "color", value: "red" },
+        { name: "ideal_for", value: "child" },
+        { name: "offer", value: "no cost EMI" }
+      ]
+    },
+    {
+      id: 58,
+      title: "Kemei",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+      price: 499,
+      qty: 10,
+      img: "item58.jpeg",
+      active: true,
+      category: "FA",
+      cartQty: 0,
+      cartPrice: 0,
+      productFor: "c",
+      discount: true,
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "timex" },
+        { name: "ideal_for", value: "child" },
+        { name: "shape", value: "squre" },
+        { name: "color", value: "blue" },
+        { name: "offer", value: "bank offer" }
+      ]
+    },
+    {
+      id: 59,
+      title: "Verni Rtail",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+      price: 280,
+      qty: 10,
+      img: "item59.jpeg",
+      active: true,
+      category: "FA",
+      cartQty: 0,
+      cartPrice: 0,
+      productFor: "c",
+      discount: false,
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "timex" },
+        { name: "ideal_for", value: "child" },
+        { name: "shape", value: "round" },
+        { name: "color", value: "green" },
+        { name: "offer", value: "no cost EMI" }
+      ]
+    },
+    {
+      id: 60,
+      title: "Nikola",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+      price: 80,
+      qty: 10,
+      img: "item60.jpeg",
+      active: true,
+      category: "FA",
+      cartQty: 0,
+      cartPrice: 0,
+      productFor: "c",
+      discount: true,
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "fastrack" },
+        { name: "ideal_for", value: "child" },
+        { name: "shape", value: "squre" },
+        { name: "color", value: "red" },
+        { name: "offer", value: "no cost EMI" }
+      ]
+    },
+    {
+      id: 61,
+      title: "RedDiamand",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+      price: 480,
+      qty: 10,
+      img: "item61.jpeg",
+      active: true,
+      category: "FA",
+      cartQty: 0,
+      cartPrice: 0,
+      productFor: "c",
+      discount: true,
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "fastrack" },
+        { name: "ideal_for", value: "child" },
+        { name: "shape", value: "round" },
+        { name: "color", value: "pink" },
+        { name: "offer", value: "bank offer" }
+      ]
+    },
+    {
+      id: 62,
+      title: "ANAGH",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+      price: 809,
+      qty: 10,
+      img: "item62.jpeg",
+      active: true,
+      category: "FA",
+      cartQty: 0,
+      cartPrice: 0,
+      productFor: "c",
+      discount: true,
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "fastrack" },
+        { name: "ideal_for", value: "child" },
+        { name: "shape", value: "round" },
+        { name: "color", value: "pink" },
+        { name: "offer", value: "bank offer" }
+      ]
+    },
+    {
+      id: 63,
+      title: "peter india",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+      price: 980,
+      qty: 10,
+      img: "item63.jpeg",
+      active: true,
+      category: "FA",
+      cartQty: 0,
+      cartPrice: 0,
+      productFor: "c",
+      discount: false,
+      diliveyCharge: true,
+      tags: [
+        { name: "brand", value: "diesel" },
+        { name: "ideal_for", value: "child" },
+        { name: "shape", value: "round" },
+        { name: "color", value: "pink" },
+        { name: "offer", value: "bank offer" }
+      ]
+    },
+    {
+      id: 64,
+      title: "Mint Green M2 Led Silicon Belt",
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
+      price: 1460,
+      qty: 91,
+      img: "item64.jpeg",
+      active: true,
+      category: "FA",
+      cartQty: 0,
+      cartPrice: 0,
+      productFor: "c",
+      discount: false,
+      diliveyCharge: false,
+      tags: [
+        { name: "brand", value: "fastrack" },
+        { name: "ideal_for", value: "child" },
+        { name: "shape", value: "squre" },
+        { name: "color", value: "green" },
+        { name: "offer", value: "no cost EMI" }
+      ]
     }
   ];
   res.send(products);

@@ -3,7 +3,8 @@ import { ProductAction, ProdcutType } from "../actions/product.action";
 
 const initialState: IAppState = {
   products: [],
-  cart: []
+  cart: [],
+  filterData: []
 };
 
 export function rootReducer(state: any = initialState, action: ProductAction) {
@@ -15,7 +16,8 @@ export function rootReducer(state: any = initialState, action: ProductAction) {
     case ProdcutType.ADD_PRODUCT:
       return {
         products: [...state.products, ...action.payload],
-        cart: [...state.cart]
+        cart: [...state.cart],
+        filterData: [...state.filterData]
       };
 
     case ProdcutType.ADD_TO_CART:
@@ -60,7 +62,8 @@ export function rootReducer(state: any = initialState, action: ProductAction) {
 
       return {
         products: [...dummyProduct],
-        cart: [...dummyCart]
+        cart: [...dummyCart],
+        filterData: [...state.filterData]
       };
 
     case ProdcutType.REMOVE_CART:
@@ -81,7 +84,8 @@ export function rootReducer(state: any = initialState, action: ProductAction) {
       }
       return {
         products: [...dummyProduct],
-        cart: [...dummyCart]
+        cart: [...dummyCart],
+        filterData: [...state.filterData]
       };
 
     case ProdcutType.UPDATE_CART:
@@ -117,7 +121,14 @@ export function rootReducer(state: any = initialState, action: ProductAction) {
       }
       return {
         products: [...dummyProduct],
-        cart: [...dummyCart]
+        cart: [...dummyCart],
+        filterData: [...state.filterData]
+      };
+    case ProdcutType.ADD_FILTER_DATA:
+      return {
+        products: [...state.products],
+        cart: [...state.cart],
+        filterData: [...action.payload]
       };
 
     default:

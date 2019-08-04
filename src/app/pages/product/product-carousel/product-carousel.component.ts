@@ -23,7 +23,6 @@ export class ProductCarouselComponent implements OnInit {
         this.products$ = data.sales.products.slice(10, 40);
         if (this.products$.length > 0) {
           this.slides = this.chunk(this.products$, this.productPerSection);
-          console.log(this.slides);
         }
       });
   }
